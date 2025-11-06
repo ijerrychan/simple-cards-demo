@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>加密货币 on Simple Cards</title>
-    <link>http://localhost:1313/tags/%E5%8A%A0%E5%AF%86%E8%B4%A7%E5%B8%81/</link>
+    <link>https://ijerrychan.github.io/simple-cards-demo/tags/%E5%8A%A0%E5%AF%86%E8%B4%A7%E5%B8%81/</link>
     <description>Recent content in 加密货币 on Simple Cards</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 01 Dec 2023 11:00:00 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/%E5%8A%A0%E5%AF%86%E8%B4%A7%E5%B8%81/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ijerrychan.github.io/simple-cards-demo/tags/%E5%8A%A0%E5%AF%86%E8%B4%A7%E5%B8%81/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>区块链基础知识：理解去中心化技术</title>
-      <link>http://localhost:1313/posts/blockchain-basics/</link>
+      <link>https://ijerrychan.github.io/simple-cards-demo/posts/blockchain-basics/</link>
       <pubDate>Fri, 01 Dec 2023 11:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/posts/blockchain-basics/</guid>
+      <guid>https://ijerrychan.github.io/simple-cards-demo/posts/blockchain-basics/</guid>
       <description>&lt;h2 id=&#34;区块链基础知识理解去中心化技术&#34;&gt;&#xD;&#xA;  区块链基础知识：理解去中心化技术&#xD;&#xA;  &lt;a href=&#34;#%e5%8c%ba%e5%9d%97%e9%93%be%e5%9f%ba%e7%a1%80%e7%9f%a5%e8%af%86%e7%90%86%e8%a7%a3%e5%8e%bb%e4%b8%ad%e5%bf%83%e5%8c%96%e6%8a%80%e6%9c%af&#34; class=&#34;anchor-link&#34; aria-label=&#34;Link to this section&#34;&gt;#&lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;区块链技术自比特币诞生以来，便以其去中心化、不可篡改和透明的特性，吸引了全球的关注。它不仅仅是加密货币的底层技术，更被视为未来数字经济的重要基础设施。&lt;/p&gt;&#xA;&lt;h3 id=&#34;什么是区块链&#34;&gt;&#xD;&#xA;  什么是区块链？&#xD;&#xA;  &lt;a href=&#34;#%e4%bb%80%e4%b9%88%e6%98%af%e5%8c%ba%e5%9d%97%e9%93%be&#34; class=&#34;anchor-link&#34; aria-label=&#34;Link to this section&#34;&gt;#&lt;/a&gt;&#xD;&#xA;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;区块链本质上是一个分布式账本，由一系列“区块”组成，这些区块通过密码学方法链接在一起，形成一个不可篡改的链条。每个区块包含了一定数量的交易信息，并带有前一个区块的哈希值，确保了数据的完整性和顺序性。&lt;/p&gt;&#xA;&lt;h3 id=&#34;区块链的核心特性&#34;&gt;&#xD;&#xA;  区块链的核心特性&#xD;&#xA;  &lt;a href=&#34;#%e5%8c%ba%e5%9d%97%e9%93%be%e7%9a%84%e6%a0%b8%e5%bf%83%e7%89%b9%e6%80%a7&#34; class=&#34;anchor-link&#34; aria-label=&#34;Link to this section&#34;&gt;#&lt;/a&gt;&#xD;&#xA;&lt;/h3&gt;&#xD;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;去中心化 (Decentralization)&lt;/strong&gt;：没有中央机构控制，所有参与者共同维护账本。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;不可篡改 (Immutability)&lt;/strong&gt;：一旦交易被记录在区块中并添加到链上，就无法被修改或删除。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;透明性 (Transparency)&lt;/strong&gt;：所有交易对网络中的所有参与者都是可见的（尽管参与者的身份可以是匿名的）。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;安全性 (Security)&lt;/strong&gt;：通过密码学哈希和共识机制（如工作量证明PoW），确保了数据的安全。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;关键组成部分&#34;&gt;&#xD;&#xA;  关键组成部分&#xD;&#xA;  &lt;a href=&#34;#%e5%85%b3%e9%94%ae%e7%bb%84%e6%88%90%e9%83%a8%e5%88%86&#34; class=&#34;anchor-link&#34; aria-label=&#34;Link to this section&#34;&gt;#&lt;/a&gt;&#xD;&#xA;&lt;/h3&gt;&#xD;&#xA;&lt;h4 id=&#34;1-区块-block&#34;&gt;&#xD;&#xA;  1. 区块 (Block)&#xD;&#xA;  &lt;a href=&#34;#1-%e5%8c%ba%e5%9d%97-block&#34; class=&#34;anchor-link&#34; aria-label=&#34;Link to this section&#34;&gt;#&lt;/a&gt;&#xD;&#xA;&lt;/h4&gt;&#xD;&#xA;&lt;p&gt;包含交易数据、时间戳、前一个区块的哈希值以及一个随机数（Nonce）。&lt;/p&gt;&#xA;&lt;h4 id=&#34;2-链-chain&#34;&gt;&#xD;&#xA;  2. 链 (Chain)&#xD;&#xA;  &lt;a href=&#34;#2-%e9%93%be-chain&#34; class=&#34;anchor-link&#34; aria-label=&#34;Link to this section&#34;&gt;#&lt;/a&gt;&#xD;&#xA;&lt;/h4&gt;&#xD;&#xA;&lt;p&gt;区块通过哈希值按时间顺序链接在一起，形成一个链条。&lt;/p&gt;&#xA;&lt;h4 id=&#34;3-节点-node&#34;&gt;&#xD;&#xA;  3. 节点 (Node)&#xD;&#xA;  &lt;a href=&#34;#3-%e8%8a%82%e7%82%b9-node&#34; class=&#34;anchor-link&#34; aria-label=&#34;Link to this section&#34;&gt;#&lt;/a&gt;&#xD;&#xA;&lt;/h4&gt;&#xD;&#xA;&lt;p&gt;参与区块链网络的计算机，存储并验证区块链的副本。&lt;/p&gt;&#xA;&lt;h4 id=&#34;4-共识机制-consensus-mechanism&#34;&gt;&#xD;&#xA;  4. 共识机制 (Consensus Mechanism)&#xD;&#xA;  &lt;a href=&#34;#4-%e5%85%b1%e8%af%86%e6%9c%ba%e5%88%b6-consensus-mechanism&#34; class=&#34;anchor-link&#34; aria-label=&#34;Link to this section&#34;&gt;#&lt;/a&gt;&#xD;&#xA;&lt;/h4&gt;&#xD;&#xA;&lt;p&gt;确保所有节点对区块链的当前状态达成一致的规则，最常见的是工作量证明 (Proof of Work, PoW) 和权益证明 (Proof of Stake, PoS)。&lt;/p&gt;</description>
     </item>
   </channel>

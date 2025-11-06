@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>文化 on Simple Cards</title>
-    <link>http://localhost:1313/tags/%E6%96%87%E5%8C%96/</link>
+    <link>https://ijerrychan.github.io/simple-cards-demo/tags/%E6%96%87%E5%8C%96/</link>
     <description>Recent content in 文化 on Simple Cards</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 12 Nov 2023 15:00:00 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/%E6%96%87%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ijerrychan.github.io/simple-cards-demo/tags/%E6%96%87%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>咖啡的艺术：从豆子到杯子</title>
-      <link>http://localhost:1313/posts/art-of-coffee/</link>
+      <link>https://ijerrychan.github.io/simple-cards-demo/posts/art-of-coffee/</link>
       <pubDate>Sun, 12 Nov 2023 15:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/posts/art-of-coffee/</guid>
+      <guid>https://ijerrychan.github.io/simple-cards-demo/posts/art-of-coffee/</guid>
       <description>&lt;h2 id=&#34;咖啡的艺术从豆子到杯子&#34;&gt;&#xD;&#xA;  咖啡的艺术：从豆子到杯子&#xD;&#xA;  &lt;a href=&#34;#%e5%92%96%e5%95%a1%e7%9a%84%e8%89%ba%e6%9c%af%e4%bb%8e%e8%b1%86%e5%ad%90%e5%88%b0%e6%9d%af%e5%ad%90&#34; class=&#34;anchor-link&#34; aria-label=&#34;Link to this section&#34;&gt;#&lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;咖啡不仅仅是一种饮品，更是一种艺术，一种生活方式。从咖啡豆的种植、采摘、烘焙，到最终冲泡成一杯香醇的咖啡，每一个环节都充满了匠心。&lt;/p&gt;&#xA;&lt;h3 id=&#34;咖啡豆的起源与种类&#34;&gt;&#xD;&#xA;  咖啡豆的起源与种类&#xD;&#xA;  &lt;a href=&#34;#%e5%92%96%e5%95%a1%e8%b1%86%e7%9a%84%e8%b5%b7%e6%ba%90%e4%b8%8e%e7%a7%8d%e7%b1%bb&#34; class=&#34;anchor-link&#34; aria-label=&#34;Link to this section&#34;&gt;#&lt;/a&gt;&#xD;&#xA;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;咖啡的起源可以追溯到埃塞俄比亚。如今，全球有两大主要咖啡豆种类：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;阿拉比卡 (Arabica)&lt;/strong&gt;：占全球咖啡产量的60%以上，风味复杂，酸度适中，带有花香、果香或巧克力味。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;罗布斯塔 (Robusta)&lt;/strong&gt;：产量次之，咖啡因含量更高，口感浓烈，带有泥土或橡胶味，常用于意式浓缩咖啡。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;烘焙的魔法&#34;&gt;&#xD;&#xA;  烘焙的魔法&#xD;&#xA;  &lt;a href=&#34;#%e7%83%98%e7%84%99%e7%9a%84%e9%ad%94%e6%b3%95&#34; class=&#34;anchor-link&#34; aria-label=&#34;Link to this section&#34;&gt;#&lt;/a&gt;&#xD;&#xA;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;烘焙是咖啡风味形成的关键步骤。不同的烘焙程度会带来截然不同的风味：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;浅度烘焙&lt;/strong&gt;：保留咖啡豆原始风味，酸度较高，带有花果香。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;中度烘焙&lt;/strong&gt;：平衡了酸度与苦度，风味醇厚，常有坚果或焦糖味。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;深度烘焙&lt;/strong&gt;：苦度较高，风味浓郁，带有烟熏或巧克力味。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;冲泡的仪式&#34;&gt;&#xD;&#xA;  冲泡的仪式&#xD;&#xA;  &lt;a href=&#34;#%e5%86%b2%e6%b3%a1%e7%9a%84%e4%bb%aa%e5%bc%8f&#34; class=&#34;anchor-link&#34; aria-label=&#34;Link to this section&#34;&gt;#&lt;/a&gt;&#xD;&#xA;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;冲泡咖啡的方式多种多样，每种方法都能带来独特的体验：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;手冲 (Pour Over)&lt;/strong&gt;：强调咖啡师的技巧，能最大程度展现咖啡豆的风味细节。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;意式浓缩 (Espresso)&lt;/strong&gt;：高压萃取，制作出浓郁的咖啡液，是许多花式咖啡的基础。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;法压壶 (French Press)&lt;/strong&gt;：操作简单，能保留咖啡的油脂和醇厚口感。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;总结&#34;&gt;&#xD;&#xA;  总结&#xD;&#xA;  &lt;a href=&#34;#%e6%80%bb%e7%bb%93&#34; class=&#34;anchor-link&#34; aria-label=&#34;Link to this section&#34;&gt;#&lt;/a&gt;&#xD;&#xA;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;品尝咖啡，就是品尝一种文化，一种艺术。下次当你端起一杯咖啡时，不妨细细品味，感受它从遥远的咖啡园到你手中的奇妙旅程。&lt;/p&gt;</description>
     </item>
   </channel>

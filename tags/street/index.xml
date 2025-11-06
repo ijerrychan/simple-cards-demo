@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Street on Simple Cards</title>
-    <link>http://localhost:1313/tags/street/</link>
+    <link>https://ijerrychan.github.io/simple-cards-demo/tags/street/</link>
     <description>Recent content in Street on Simple Cards</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 01 Nov 2024 17:45:00 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/street/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ijerrychan.github.io/simple-cards-demo/tags/street/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Urban Street Photography</title>
-      <link>http://localhost:1313/posts/waterfall-test-5/</link>
+      <link>https://ijerrychan.github.io/simple-cards-demo/posts/waterfall-test-5/</link>
       <pubDate>Fri, 01 Nov 2024 17:45:00 +0800</pubDate>
-      <guid>http://localhost:1313/posts/waterfall-test-5/</guid>
+      <guid>https://ijerrychan.github.io/simple-cards-demo/posts/waterfall-test-5/</guid>
       <description>Capturing the raw energy and stories of city streets through the lens of urban photography.</description>
     </item>
   </channel>

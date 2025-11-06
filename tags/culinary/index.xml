@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Culinary on Simple Cards</title>
-    <link>http://localhost:1313/tags/culinary/</link>
+    <link>https://ijerrychan.github.io/simple-cards-demo/tags/culinary/</link>
     <description>Recent content in Culinary on Simple Cards</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 30 Oct 2024 17:45:00 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/culinary/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ijerrychan.github.io/simple-cards-demo/tags/culinary/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Culinary Adventures</title>
-      <link>http://localhost:1313/posts/waterfall-test-6/</link>
+      <link>https://ijerrychan.github.io/simple-cards-demo/posts/waterfall-test-6/</link>
       <pubDate>Wed, 30 Oct 2024 17:45:00 +0800</pubDate>
-      <guid>http://localhost:1313/posts/waterfall-test-6/</guid>
+      <guid>https://ijerrychan.github.io/simple-cards-demo/posts/waterfall-test-6/</guid>
       <description>Exploring global cuisines and discovering the art of cooking through authentic recipes and techniques.</description>
     </item>
   </channel>

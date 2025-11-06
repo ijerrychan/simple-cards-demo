@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Creativity on Simple Cards</title>
-    <link>http://localhost:1313/tags/creativity/</link>
+    <link>https://ijerrychan.github.io/simple-cards-demo/tags/creativity/</link>
     <description>Recent content in Creativity on Simple Cards</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 03 Nov 2024 17:45:00 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/creativity/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ijerrychan.github.io/simple-cards-demo/tags/creativity/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Digital Art Revolution</title>
-      <link>http://localhost:1313/posts/waterfall-test-3/</link>
+      <link>https://ijerrychan.github.io/simple-cards-demo/posts/waterfall-test-3/</link>
       <pubDate>Sun, 03 Nov 2024 17:45:00 +0800</pubDate>
-      <guid>http://localhost:1313/posts/waterfall-test-3/</guid>
+      <guid>https://ijerrychan.github.io/simple-cards-demo/posts/waterfall-test-3/</guid>
       <description>How digital technology is transforming the art world and creating new possibilities for creative expression.</description>
     </item>
   </channel>
