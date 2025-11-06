@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>深入理解设计模式：读《设计模式》有感 | Simple Cards</title>
+  <meta name="generator" content="Hugo 0.152.2">
+
+  
+  
+  <link rel="stylesheet" href="http://localhost:1313/scss/main.min.f2eaa26d682e91380e47d7af0a7eb968d44c7ac3b8657e7de6f96a901552a257.css">
+
+  
+    
+    
+
+    
+      
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bungee&amp;display=swap" rel="stylesheet">
+        <style>
+          :root {
+            
+            
+            --title-font: 'Bungee', sans-serif;
+          }
+        </style>
+      
+    
+
+    
+    <style>
+      
+      [data-theme='dark'] {
+        --bg-primary: #1a202c;
+        --bg-secondary: #2d3748;
+        --text-primary: #e2e8f0;
+        --accent-primary: #63b3ed;
+        --link-primary: #63b3ed;
+        --border-primary: #4a5568;
+        --button-primary-bg: #4a5568;
+        --button-primary-hover-bg: #2d3748;
+        --sidebar-opacity: 1;
+        --content-opacity: 1;
+      }
+      
+      [data-theme='dreamer'] {
+        --bg-primary: #1e1c2f;
+        --bg-secondary: #2c2a3f;
+        --text-primary: #c3c0d1;
+        --accent-primary: #82f5a0;
+        --link-primary: #a390f5;
+        --border-primary: #43405e;
+        --button-primary-bg: #37344e;
+        --button-primary-hover-bg: #43405e;
+        --sidebar-opacity: 1;
+        --content-opacity: 1;
+      }
+      
+      [data-theme='cream-paper'] {
+        --bg-primary: #f6f1e9;
+        --bg-secondary: #fdfaf4;
+        --text-primary: #3b3b3b;
+        --accent-primary: #2a6f97;
+        --link-primary: #2a6f97;
+        --border-primary: #dcd6c8;
+        --button-primary-bg: #e8e2d9;
+        --button-primary-hover-bg: #f3ede3;
+        --sidebar-opacity: 1;
+        --content-opacity: 1;
+      }
+      
+      [data-theme='sunset'] {
+        --bg-primary: #3a294a;
+        --bg-secondary: #2e203c;
+        --text-primary: #f8c5d8;
+        --accent-primary: #ff8fab;
+        --link-primary: #ff8fab;
+        --border-primary: #4a395a;
+        --button-primary-bg: #4a395a;
+        --button-primary-hover-bg: #5a496a;
+        --sidebar-opacity: 1;
+        --content-opacity: 1;
+      }
+      
+      [data-theme='synthwave'] {
+        --bg-primary: #000022;
+        --bg-secondary: #000033;
+        --text-primary: #ffffff;
+        --accent-primary: #00ffff;
+        --link-primary: #ff00ff;
+        --border-primary: #00ffff;
+        --button-primary-bg: #000044;
+        --button-primary-hover-bg: #000055;
+        --sidebar-opacity: 1;
+        --content-opacity: 1;
+      }
+      
+    </style>
+  
+
+  
+  <style>
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    
+    [data-theme='dark'] body::before {
+        background-image: none;
+        opacity: 0;
+    }
+    
+    [data-theme='dreamer'] body::before {
+        background-image: none;
+        opacity: 0;
+    }
+    
+    [data-theme='cream-paper'] body::before {
+        background-image: none;
+        opacity: 0;
+    }
+    
+    [data-theme='sunset'] body::before {
+        background-image: none;
+        opacity: 0;
+    }
+    
+    [data-theme='synthwave'] body::before {
+        background-image: none;
+        opacity: 0;
+    }
+    
+  </style>
+
+  
+  <style>
+    :root {
+      --sidebar-width: 17.5rem;
+      --content-width: 65rem;
+      --border-radius: 10px;
+      --border-thickness: 1px;
+      --shadow-thickness: 3px;
+      --card-columns: 2;
+    }
+  </style>
+
+  
+  <script>
+    (function() {
+      
+      var availableThemes = ["dark","dreamer","cream-paper","sunset","synthwave"];
+      
+      var theme = localStorage.getItem('theme');
+      if (!theme && availableThemes.length > 0) {
+        theme = availableThemes[0];
+        localStorage.setItem('theme', theme);
+      }
+      
+      if (theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+      }
+      
+    })();
+  </script>
+
+  
+  <noscript>
+    <style>
+      .waterfall-layout .article-list {
+        opacity: 1;
+      }
+      .waterfall-layout .card-item {
+        position: relative;
+        width: 100%;
+      }
+    </style>
+  </noscript>
+</head>
+
+<body>
+  <div class="wrapper">
+    
+    <button class="sidebar-toggle" aria-label="Toggle sidebar">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+           viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+           class="feather feather-menu">
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <line x1="3" y1="18" x2="21" y2="18" />
+      </svg>
+    </button>
+
+    
+    <aside
+  class="sidebar"
+  style='--sidebar-width: 17.5rem'
+>
+  <div class="sidebar-inner">
+    <a href="http://localhost:1313/" class="logo-container">
+      
+      <span class="logo-text">Simple Cards</span>
+    </a>
+
+    <div class="sidebar-content">
+      <nav class="main-nav">
+        <ul>
+          
+            
+              <li>
+                <a href="/">Posts</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/waterfall/">Waterfall</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/archive/">Archive</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/tags/">️Tags</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/search/">Search</a>
+              </li>
+            
+          
+            
+              <li class="menu-item-has-children">
+                <a href="#" class="menu-toggle" data-target="submenu-categories">
+                  Categories
+                  <span class="submenu-indicator">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                      <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    </svg>
+                  </span>
+                </a>
+                <ul class="submenu" id="submenu-categories">
+                  
+                    
+                      <li class="menu-item-has-children">
+                        <a href="#" class="menu-toggle" data-target="submenu-technology">
+                          Technology
+                          <span class="submenu-indicator">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                              <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            </svg>
+                          </span>
+                        </a>
+                        <ul class="submenu" id="submenu-technology">
+                          
+                            <li>
+                              <a href="/categories/programming/">Programming</a>
+                            </li>
+                          
+                        </ul>
+                      </li>
+                    
+                  
+                </ul>
+              </li>
+            
+          
+        </ul>
+      </nav>
+
+
+      <div class="sidebar-bottom">
+        <div class="sidebar-buttons">
+          <button id="theme-switcher" title="Next theme">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2
+                   2 6.477 2 12c0 2.21.895 4.209 2.343 5.657L12 22z"
+              />
+              <circle cx="7.5" cy="10.5" r="1.5" />
+              <circle cx="12" cy="7" r="1" />
+              <circle cx="16.5" cy="10.5" r="1.5" />
+              <circle cx="15" cy="15" r="1" />
+            </svg>
+          </button>
+        </div>
+        <div class="sidebar-footer">
+          <footer class="site-footer">
+  <p>&copy; 2025 Simple Cards.</p>
+  <p>Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & Simple Cards.</p>
+</footer>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>
+
+    <div class="sidebar-overlay"></div>
+
+    
+    <div class="main-area">
+      <main class="content">
+        
+  <div class="container">
+    <article class="single-article" id="top">
+      
+      <header>
+        <h1>深入理解设计模式：读《设计模式》有感</h1>
+        <div class="article-meta">
+  <time datetime="2023-11-05">
+    Nov 5, 2023
+  </time>
+
+  
+    <span class="tags">
+      
+        <a href="/tags/%E7%BC%96%E7%A8%8B">#编程</a>
+      
+        <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F">#设计模式</a>
+      
+        <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B">#软件工程</a>
+      
+        <a href="/tags/%E6%8A%80%E6%9C%AF">#技术</a>
+      
+    </span>
+  
+</div>
+      </header>
+      <div class="article-content">
+        <h2 id="深入理解设计模式读设计模式有感">
+  深入理解设计模式：读《设计模式》有感
+  <a href="#%e6%b7%b1%e5%85%a5%e7%90%86%e8%a7%a3%e8%ae%be%e8%ae%a1%e6%a8%a1%e5%bc%8f%e8%af%bb%e8%ae%be%e8%ae%a1%e6%a8%a1%e5%bc%8f%e6%9c%89%e6%84%9f" class="anchor-link" aria-label="Link to this section">#</a>
+</h2>
+<p>最近重读了经典的《设计模式：可复用面向对象软件的基础》（Gang of Four），对软件设计有了更深层次的理解。设计模式不仅仅是代码技巧，更是解决常见软件设计问题的经验总结。</p>
+<h3 id="为什么需要设计模式">
+  为什么需要设计模式？
+  <a href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e9%9c%80%e8%a6%81%e8%ae%be%e8%ae%a1%e6%a8%a1%e5%bc%8f" class="anchor-link" aria-label="Link to this section">#</a>
+</h3>
+<p>在软件开发过程中，我们经常会遇到一些反复出现的设计问题。设计模式提供了一套经过验证的解决方案，它们是：</p>
+<ul>
+<li><strong>可复用的</strong>：可以直接应用于类似的问题。</li>
+<li><strong>可沟通的</strong>：提供了一种通用的语言，方便开发者之间交流设计思想。</li>
+<li><strong>可维护的</strong>：遵循设计模式的代码通常更易于理解和维护。</li>
+</ul>
+<h3 id="几种常见的设计模式">
+  几种常见的设计模式
+  <a href="#%e5%87%a0%e7%a7%8d%e5%b8%b8%e8%a7%81%e7%9a%84%e8%ae%be%e8%ae%a1%e6%a8%a1%e5%bc%8f" class="anchor-link" aria-label="Link to this section">#</a>
+</h3>
+<h4 id="1-单例模式-singleton">
+  1. 单例模式 (Singleton)
+  <a href="#1-%e5%8d%95%e4%be%8b%e6%a8%a1%e5%bc%8f-singleton" class="anchor-link" aria-label="Link to this section">#</a>
+</h4>
+<p>确保一个类只有一个实例，并提供一个全局访问点。
+<strong>应用场景</strong>：日志记录器、配置管理器。</p>
+<h4 id="2-工厂模式-factory-method">
+  2. 工厂模式 (Factory Method)
+  <a href="#2-%e5%b7%a5%e5%8e%82%e6%a8%a1%e5%bc%8f-factory-method" class="anchor-link" aria-label="Link to this section">#</a>
+</h4>
+<p>定义一个用于创建对象的接口，让子类决定实例化哪一个类。工厂方法使一个类的实例化延迟到其子类。
+<strong>应用场景</strong>：根据不同条件创建不同类型的对象。</p>
+<h4 id="3-观察者模式-observer">
+  3. 观察者模式 (Observer)
+  <a href="#3-%e8%a7%82%e5%af%9f%e8%80%85%e6%a8%a1%e5%bc%8f-observer" class="anchor-link" aria-label="Link to this section">#</a>
+</h4>
+<p>定义对象间的一种一对多的依赖关系，当一个对象的状态发生改变时，所有依赖于它的对象都得到通知并被自动更新。
+<strong>应用场景</strong>：事件处理系统、GUI编程。</p>
+<h3 id="总结">
+  总结
+  <a href="#%e6%80%bb%e7%bb%93" class="anchor-link" aria-label="Link to this section">#</a>
+</h3>
+<p>设计模式是软件开发者的宝贵财富。它们帮助我们编写出更健壮、更灵活、更易于扩展和维护的代码。然而，并非所有问题都需要设计模式，过度使用反而会增加复杂性。关键在于理解每种模式的意图和适用场景，并根据实际需求灵活运用。</p>
+
+      </div>
+    </article>
+  </div>
+
+        </main>
+      <aside class="widgets">
+        
+  <nav class="article-toc" id="article-toc">
+  <div class="toc-title">
+    <span>深入理解设计模式：读《设计模式》有感</span>
+  </div>
+  <div class="toc-nav-wrapper">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#深入理解设计模式读设计模式有感">深入理解设计模式：读《设计模式》有感</a>
+      <ul>
+        <li><a href="#为什么需要设计模式">为什么需要设计模式？</a></li>
+        <li><a href="#几种常见的设计模式">几种常见的设计模式</a></li>
+        <li><a href="#总结">总结</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</nav>
+
+  
+  <button class="mobile-toc-toggle" id="mobile-toc-toggle" aria-label="Toggle table of contents">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </button>
+
+  
+  <div class="mobile-toc-container" id="mobile-toc-container">
+    <div class="mobile-toc-header">
+      <span class="mobile-toc-title">深入理解设计模式：读《设计模式》有感</span>
+    </div>
+    <div class="mobile-toc-content">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#深入理解设计模式读设计模式有感">深入理解设计模式：读《设计模式》有感</a>
+      <ul>
+        <li><a href="#为什么需要设计模式">为什么需要设计模式？</a></li>
+        <li><a href="#几种常见的设计模式">几种常见的设计模式</a></li>
+        <li><a href="#总结">总结</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  </div>
+
+  
+  <div class="mobile-widgets-overlay" id="mobile-widgets-overlay"></div>
+<a href="#top" class="back-to-top" id="back-to-top">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</a>
+
+      </aside>
+    </div>
+  </div>
+
+  
+  
+  <script>
+    
+    window.styleConfig = "{\"border_radius\":\"10px\",\"border_thickness\":\"1px\",\"card_columns\":2,\"content_width\":\"65rem\",\"shadow_thickness\":\"3px\",\"sidebar_width\":\"17.5rem\"}";
+    
+    
+    window.availableThemes = ["dark","dreamer","cream-paper","sunset","synthwave"];
+    
+    
+    
+    (function() {
+      let theme = localStorage.getItem('theme');
+      if (!theme && window.availableThemes && window.availableThemes.length > 0) {
+        theme = window.availableThemes[0];
+        localStorage.setItem('theme', theme);
+      }
+      if (theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        window.currentThemeName = theme;
+      }
+    })();
+  </script>
+
+  
+  <script src="http://localhost:1313/js/main.min.b9748a8941a497381787c425905f015004b1dd6ab2463885a5c33b15e9e16edb.js" defer></script>
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    <script src="http://localhost:1313/js/anchor-links.min.8491553b31a2d4427b943211282b7dd4ac5244264033b8a21854cf30fbcc7679.js" defer></script>
+  
+</body>
+</html>

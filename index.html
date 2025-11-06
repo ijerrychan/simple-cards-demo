@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Cards | Simple Cards</title>
+  <meta name="generator" content="Hugo 0.152.2">
+
+  
+  
+  <link rel="stylesheet" href="http://localhost:1313/scss/main.min.f2eaa26d682e91380e47d7af0a7eb968d44c7ac3b8657e7de6f96a901552a257.css">
+
+  
+    
+    
+
+    
+      
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bungee&amp;display=swap" rel="stylesheet">
+        <style>
+          :root {
+            
+            
+            --title-font: 'Bungee', sans-serif;
+          }
+        </style>
+      
+    
+
+    
+    <style>
+      
+      [data-theme='dark'] {
+        --bg-primary: #1a202c;
+        --bg-secondary: #2d3748;
+        --text-primary: #e2e8f0;
+        --accent-primary: #63b3ed;
+        --link-primary: #63b3ed;
+        --border-primary: #4a5568;
+        --button-primary-bg: #4a5568;
+        --button-primary-hover-bg: #2d3748;
+        --sidebar-opacity: 1;
+        --content-opacity: 1;
+      }
+      
+      [data-theme='dreamer'] {
+        --bg-primary: #1e1c2f;
+        --bg-secondary: #2c2a3f;
+        --text-primary: #c3c0d1;
+        --accent-primary: #82f5a0;
+        --link-primary: #a390f5;
+        --border-primary: #43405e;
+        --button-primary-bg: #37344e;
+        --button-primary-hover-bg: #43405e;
+        --sidebar-opacity: 1;
+        --content-opacity: 1;
+      }
+      
+      [data-theme='cream-paper'] {
+        --bg-primary: #f6f1e9;
+        --bg-secondary: #fdfaf4;
+        --text-primary: #3b3b3b;
+        --accent-primary: #2a6f97;
+        --link-primary: #2a6f97;
+        --border-primary: #dcd6c8;
+        --button-primary-bg: #e8e2d9;
+        --button-primary-hover-bg: #f3ede3;
+        --sidebar-opacity: 1;
+        --content-opacity: 1;
+      }
+      
+      [data-theme='sunset'] {
+        --bg-primary: #3a294a;
+        --bg-secondary: #2e203c;
+        --text-primary: #f8c5d8;
+        --accent-primary: #ff8fab;
+        --link-primary: #ff8fab;
+        --border-primary: #4a395a;
+        --button-primary-bg: #4a395a;
+        --button-primary-hover-bg: #5a496a;
+        --sidebar-opacity: 1;
+        --content-opacity: 1;
+      }
+      
+      [data-theme='synthwave'] {
+        --bg-primary: #000022;
+        --bg-secondary: #000033;
+        --text-primary: #ffffff;
+        --accent-primary: #00ffff;
+        --link-primary: #ff00ff;
+        --border-primary: #00ffff;
+        --button-primary-bg: #000044;
+        --button-primary-hover-bg: #000055;
+        --sidebar-opacity: 1;
+        --content-opacity: 1;
+      }
+      
+    </style>
+  
+
+  
+  <style>
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    
+    [data-theme='dark'] body::before {
+        background-image: none;
+        opacity: 0;
+    }
+    
+    [data-theme='dreamer'] body::before {
+        background-image: none;
+        opacity: 0;
+    }
+    
+    [data-theme='cream-paper'] body::before {
+        background-image: none;
+        opacity: 0;
+    }
+    
+    [data-theme='sunset'] body::before {
+        background-image: none;
+        opacity: 0;
+    }
+    
+    [data-theme='synthwave'] body::before {
+        background-image: none;
+        opacity: 0;
+    }
+    
+  </style>
+
+  
+  <style>
+    :root {
+      --sidebar-width: 17.5rem;
+      --content-width: 65rem;
+      --border-radius: 10px;
+      --border-thickness: 1px;
+      --shadow-thickness: 3px;
+      --card-columns: 2;
+    }
+  </style>
+
+  
+  <script>
+    (function() {
+      
+      var availableThemes = ["dark","dreamer","cream-paper","sunset","synthwave"];
+      
+      var theme = localStorage.getItem('theme');
+      if (!theme && availableThemes.length > 0) {
+        theme = availableThemes[0];
+        localStorage.setItem('theme', theme);
+      }
+      
+      if (theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+      }
+      
+    })();
+  </script>
+
+  
+  <noscript>
+    <style>
+      .waterfall-layout .article-list {
+        opacity: 1;
+      }
+      .waterfall-layout .card-item {
+        position: relative;
+        width: 100%;
+      }
+    </style>
+  </noscript>
+</head>
+
+<body>
+  <div class="wrapper">
+    
+    <button class="sidebar-toggle" aria-label="Toggle sidebar">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+           viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+           class="feather feather-menu">
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <line x1="3" y1="18" x2="21" y2="18" />
+      </svg>
+    </button>
+
+    
+    <aside
+  class="sidebar"
+  style='--sidebar-width: 17.5rem'
+>
+  <div class="sidebar-inner">
+    <a href="http://localhost:1313/" class="logo-container">
+      
+      <span class="logo-text">Simple Cards</span>
+    </a>
+
+    <div class="sidebar-content">
+      <nav class="main-nav">
+        <ul>
+          
+            
+              <li>
+                <a href="/">Posts</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/waterfall/">Waterfall</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/archive/">Archive</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/tags/">️Tags</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/search/">Search</a>
+              </li>
+            
+          
+            
+              <li class="menu-item-has-children">
+                <a href="#" class="menu-toggle" data-target="submenu-categories">
+                  Categories
+                  <span class="submenu-indicator">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                      <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    </svg>
+                  </span>
+                </a>
+                <ul class="submenu" id="submenu-categories">
+                  
+                    
+                      <li class="menu-item-has-children">
+                        <a href="#" class="menu-toggle" data-target="submenu-technology">
+                          Technology
+                          <span class="submenu-indicator">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                              <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            </svg>
+                          </span>
+                        </a>
+                        <ul class="submenu" id="submenu-technology">
+                          
+                            <li>
+                              <a href="/categories/programming/">Programming</a>
+                            </li>
+                          
+                        </ul>
+                      </li>
+                    
+                  
+                </ul>
+              </li>
+            
+          
+        </ul>
+      </nav>
+
+
+      <div class="sidebar-bottom">
+        <div class="sidebar-buttons">
+          <button id="theme-switcher" title="Next theme">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2
+                   2 6.477 2 12c0 2.21.895 4.209 2.343 5.657L12 22z"
+              />
+              <circle cx="7.5" cy="10.5" r="1.5" />
+              <circle cx="12" cy="7" r="1" />
+              <circle cx="16.5" cy="10.5" r="1.5" />
+              <circle cx="15" cy="15" r="1" />
+            </svg>
+          </button>
+        </div>
+        <div class="sidebar-footer">
+          <footer class="site-footer">
+  <p>&copy; 2025 Simple Cards.</p>
+  <p>Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & Simple Cards.</p>
+</footer>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>
+
+    <div class="sidebar-overlay"></div>
+
+    
+    <div class="main-area">
+      <main class="content">
+        
+  <div class="container">
+    <div class="article-list single-column">
+      
+        
+
+
+
+<div class="card-item">
+  
+  
+  <div class="card-content">
+    <div class="card-header">
+      <a href="http://localhost:1313/posts/test-markdown/" class="card-title">Markdown 样式测试</a>
+    </div>
+
+    
+      <div class="card-preview">
+        <p class="card-summary">一级标题 H1#这是在一级标题下的段落文本。我们希望确保字体大小、行高和边距都看起来很棒。链接的样式应该是这样的：这是一个示例链接。
+二级标题 H2#二级标题应该比一级标题小一些，但仍然很突...</p>
+      </div>
+    
+
+    <div class="article-meta">
+        <div class="article-meta">
+  <time datetime="2025-11-03">
+    Nov 3, 2025
+  </time>
+
+  
+    <span class="tags">
+      
+        <a href="/tags/%E6%B5%8B%E8%AF%95">#测试</a>
+      
+        <a href="/tags/markdown">#Markdown</a>
+      
+    </span>
+  
+</div>
+    </div>
+  </div>
+</div>
+
+      
+        
+
+
+  
+
+
+<div class="card-item has-image">
+  
+    <div class="card-image">
+      <img src="https://picsum.photos/400/300?random=101" alt="Beautiful Mountain Landscape" loading="lazy">
+    </div>
+  
+  
+  <div class="card-content">
+    <div class="card-header">
+      <a href="http://localhost:1313/posts/waterfall-test-1/" class="card-title">Beautiful Mountain Landscape</a>
+    </div>
+
+    
+      <div class="card-preview">
+        <p class="card-summary">Beautiful Mountain Landscape#This breathtaking photograph captures the essence of mountain beauty...</p>
+      </div>
+    
+
+    <div class="article-meta">
+        <div class="article-meta">
+  <time datetime="2024-11-05">
+    Nov 5, 2024
+  </time>
+
+  
+    <span class="tags">
+      
+        <a href="/tags/photography">#photography</a>
+      
+        <a href="/tags/nature">#nature</a>
+      
+        <a href="/tags/landscape">#landscape</a>
+      
+    </span>
+  
+</div>
+    </div>
+  </div>
+</div>
+
+      
+        
+
+
+
+<div class="card-item">
+  
+  
+  <div class="card-content">
+    <div class="card-header">
+      <a href="http://localhost:1313/waterfall/" class="card-title">Waterfall Gallery</a>
+    </div>
+
+    
+
+    <div class="article-meta">
+        <div class="article-meta">
+  <time datetime="2024-11-05">
+    Nov 5, 2024
+  </time>
+
+  
+    <span class="tags">
+      
+        <a href="/tags/test">#test</a>
+      
+        <a href="/tags/waterfall">#waterfall</a>
+      
+    </span>
+  
+</div>
+    </div>
+  </div>
+</div>
+
+      
+        
+
+
+
+<div class="card-item">
+  
+  
+  <div class="card-content">
+    <div class="card-header">
+      <a href="http://localhost:1313/posts/shortcode-showcase/" class="card-title">Shortcode 功能展示</a>
+    </div>
+
+    
+      <div class="card-preview">
+        <p class="card-summary">🎨 Shortcode 功能展示#这篇文章展示了 Simple Cards 主题中所有可用的 shortcode 功能。这些 shortcode 可以帮助您创建更丰富、更互动的内容。
+🔘 按钮组...</p>
+      </div>
+    
+
+    <div class="article-meta">
+        <div class="article-meta">
+  <time datetime="2024-11-04">
+    Nov 4, 2024
+  </time>
+
+  
+    <span class="tags">
+      
+        <a href="/tags/shortcode">#shortcode</a>
+      
+        <a href="/tags/demo">#demo</a>
+      
+        <a href="/tags/simple-cards">#simple-cards</a>
+      
+    </span>
+  
+</div>
+    </div>
+  </div>
+</div>
+
+      
+        
+
+
+
+<div class="card-item">
+  
+  
+  <div class="card-content">
+    <div class="card-header">
+      <a href="http://localhost:1313/posts/waterfall-test-2/" class="card-title">Modern Architecture Design</a>
+    </div>
+
+    
+      <div class="card-preview">
+        <p class="card-summary">Modern Architecture Design#Modern architecture represents a departure from traditional design pri...</p>
+      </div>
+    
+
+    <div class="article-meta">
+        <div class="article-meta">
+  <time datetime="2024-11-04">
+    Nov 4, 2024
+  </time>
+
+  
+    <span class="tags">
+      
+        <a href="/tags/architecture">#architecture</a>
+      
+        <a href="/tags/design">#design</a>
+      
+        <a href="/tags/modern">#modern</a>
+      
+    </span>
+  
+</div>
+    </div>
+  </div>
+</div>
+
+      
+        
+
+
+
+<div class="card-item">
+  
+  
+  <div class="card-content">
+    <div class="card-header">
+      <a href="http://localhost:1313/posts/waterfall-test-3/" class="card-title">Digital Art Revolution</a>
+    </div>
+
+    
+      <div class="card-preview">
+        <p class="card-summary">Digital Art Revolution#The digital age has ushered in a revolution in artistic expression, blendi...</p>
+      </div>
+    
+
+    <div class="article-meta">
+        <div class="article-meta">
+  <time datetime="2024-11-03">
+    Nov 3, 2024
+  </time>
+
+  
+    <span class="tags">
+      
+        <a href="/tags/digital-art">#digital-art</a>
+      
+        <a href="/tags/creativity">#creativity</a>
+      
+        <a href="/tags/technology">#technology</a>
+      
+    </span>
+  
+</div>
+    </div>
+  </div>
+</div>
+
+      
+        
+
+
+
+<div class="card-item">
+  
+  
+  <div class="card-content">
+    <div class="card-header">
+      <a href="http://localhost:1313/posts/waterfall-test-4/" class="card-title">Minimalist Living Philosophy</a>
+    </div>
+
+    
+      <div class="card-preview">
+        <p class="card-summary">Minimalist Living Philosophy#Minimalism isn&amp;rsquo;t just about having fewer possessions—it&amp;rsquo;...</p>
+      </div>
+    
+
+    <div class="article-meta">
+        <div class="article-meta">
+  <time datetime="2024-11-02">
+    Nov 2, 2024
+  </time>
+
+  
+    <span class="tags">
+      
+        <a href="/tags/minimalism">#minimalism</a>
+      
+        <a href="/tags/lifestyle">#lifestyle</a>
+      
+        <a href="/tags/philosophy">#philosophy</a>
+      
+    </span>
+  
+</div>
+    </div>
+  </div>
+</div>
+
+      
+        
+
+
+
+<div class="card-item">
+  
+  
+  <div class="card-content">
+    <div class="card-header">
+      <a href="http://localhost:1313/posts/waterfall-test-5/" class="card-title">Urban Street Photography</a>
+    </div>
+
+    
+      <div class="card-preview">
+        <p class="card-summary">Urban Street Photography#Street photography captures the candid moments and authentic stories tha...</p>
+      </div>
+    
+
+    <div class="article-meta">
+        <div class="article-meta">
+  <time datetime="2024-11-01">
+    Nov 1, 2024
+  </time>
+
+  
+    <span class="tags">
+      
+        <a href="/tags/photography">#photography</a>
+      
+        <a href="/tags/urban">#urban</a>
+      
+        <a href="/tags/street">#street</a>
+      
+    </span>
+  
+</div>
+    </div>
+  </div>
+</div>
+
+      
+        
+
+
+
+<div class="card-item">
+  
+  
+  <div class="card-content">
+    <div class="card-header">
+      <a href="http://localhost:1313/posts/waterfall-test-6/" class="card-title">Culinary Adventures</a>
+    </div>
+
+    
+      <div class="card-preview">
+        <p class="card-summary">Culinary Adventures#Food is not just sustenance; it&amp;rsquo;s a journey through culture, tradition,...</p>
+      </div>
+    
+
+    <div class="article-meta">
+        <div class="article-meta">
+  <time datetime="2024-10-30">
+    Oct 30, 2024
+  </time>
+
+  
+    <span class="tags">
+      
+        <a href="/tags/food">#food</a>
+      
+        <a href="/tags/cooking">#cooking</a>
+      
+        <a href="/tags/culinary">#culinary</a>
+      
+    </span>
+  
+</div>
+    </div>
+  </div>
+</div>
+
+      
+        
+
+
+
+<div class="card-item">
+  
+  
+  <div class="card-content">
+    <div class="card-header">
+      <a href="http://localhost:1313/posts/toc-very-long-test/" class="card-title">超长目录测试文章</a>
+    </div>
+
+    
+      <div class="card-preview">
+        <p class="card-summary">超长目录测试文章#这篇文章专门用于测试当目录高度超过页面高度时的透明度功能表现。文章包含大量章节，目录会很长，需要滚动才能查看所有章节。
+第一部分：基础章节#第一章：开始#这是第一章的内...</p>
+      </div>
+    
+
+    <div class="article-meta">
+        <div class="article-meta">
+  <time datetime="2024-01-01">
+    Jan 1, 2024
+  </time>
+
+  
+    <span class="tags">
+      
+        <a href="/tags/test">#test</a>
+      
+        <a href="/tags/toc">#toc</a>
+      
+        <a href="/tags/long">#long</a>
+      
+        <a href="/tags/navigation">#navigation</a>
+      
+    </span>
+  
+</div>
+    </div>
+  </div>
+</div>
+
+      
+    </div>
+    
+
+<nav class="pagination" role="navigation">
+  <ul>
+    
+      <li class="disabled">
+        <span>‹</span>
+      </li>
+    
+    
+    
+      
+        <li class="active">
+          <span>1</span>
+        </li>
+      
+    
+      
+        <li>
+          <a href="/page/2/">2</a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="/page/3/">3</a>
+        </li>
+      
+    
+    
+    
+      <li>
+        <a href="/page/2/" class="pagination-next">
+          ›
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+
+  </div>
+
+        </main>
+      <aside class="widgets">
+        
+<a href="#top" class="back-to-top" id="back-to-top">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</a>
+
+      </aside>
+    </div>
+  </div>
+
+  
+  
+  <script>
+    
+    window.styleConfig = "{\"border_radius\":\"10px\",\"border_thickness\":\"1px\",\"card_columns\":2,\"content_width\":\"65rem\",\"shadow_thickness\":\"3px\",\"sidebar_width\":\"17.5rem\"}";
+    
+    
+    window.availableThemes = ["dark","dreamer","cream-paper","sunset","synthwave"];
+    
+    
+    
+    (function() {
+      let theme = localStorage.getItem('theme');
+      if (!theme && window.availableThemes && window.availableThemes.length > 0) {
+        theme = window.availableThemes[0];
+        localStorage.setItem('theme', theme);
+      }
+      if (theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        window.currentThemeName = theme;
+      }
+    })();
+  </script>
+
+  
+  <script src="http://localhost:1313/js/main.min.b9748a8941a497381787c425905f015004b1dd6ab2463885a5c33b15e9e16edb.js" defer></script>
+  
+  
+  
+  
+  
+    
+    <script src="http://localhost:1313/js/waterfall.min.291dfe0faa0459128ce0118567f9fead27fe5d7cd2a95841e3941548909c3757.js" defer></script>
+  
+  
+  
+  
+</body>
+</html>

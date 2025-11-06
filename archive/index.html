@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Archive | Simple Cards</title>
+  <meta name="generator" content="Hugo 0.152.2">
+
+  
+  
+  <link rel="stylesheet" href="http://localhost:1313/scss/main.min.f2eaa26d682e91380e47d7af0a7eb968d44c7ac3b8657e7de6f96a901552a257.css">
+
+  
+    
+    
+
+    
+      
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bungee&amp;display=swap" rel="stylesheet">
+        <style>
+          :root {
+            
+            
+            --title-font: 'Bungee', sans-serif;
+          }
+        </style>
+      
+    
+
+    
+    <style>
+      
+      [data-theme='dark'] {
+        --bg-primary: #1a202c;
+        --bg-secondary: #2d3748;
+        --text-primary: #e2e8f0;
+        --accent-primary: #63b3ed;
+        --link-primary: #63b3ed;
+        --border-primary: #4a5568;
+        --button-primary-bg: #4a5568;
+        --button-primary-hover-bg: #2d3748;
+        --sidebar-opacity: 1;
+        --content-opacity: 1;
+      }
+      
+      [data-theme='dreamer'] {
+        --bg-primary: #1e1c2f;
+        --bg-secondary: #2c2a3f;
+        --text-primary: #c3c0d1;
+        --accent-primary: #82f5a0;
+        --link-primary: #a390f5;
+        --border-primary: #43405e;
+        --button-primary-bg: #37344e;
+        --button-primary-hover-bg: #43405e;
+        --sidebar-opacity: 1;
+        --content-opacity: 1;
+      }
+      
+      [data-theme='cream-paper'] {
+        --bg-primary: #f6f1e9;
+        --bg-secondary: #fdfaf4;
+        --text-primary: #3b3b3b;
+        --accent-primary: #2a6f97;
+        --link-primary: #2a6f97;
+        --border-primary: #dcd6c8;
+        --button-primary-bg: #e8e2d9;
+        --button-primary-hover-bg: #f3ede3;
+        --sidebar-opacity: 1;
+        --content-opacity: 1;
+      }
+      
+      [data-theme='sunset'] {
+        --bg-primary: #3a294a;
+        --bg-secondary: #2e203c;
+        --text-primary: #f8c5d8;
+        --accent-primary: #ff8fab;
+        --link-primary: #ff8fab;
+        --border-primary: #4a395a;
+        --button-primary-bg: #4a395a;
+        --button-primary-hover-bg: #5a496a;
+        --sidebar-opacity: 1;
+        --content-opacity: 1;
+      }
+      
+      [data-theme='synthwave'] {
+        --bg-primary: #000022;
+        --bg-secondary: #000033;
+        --text-primary: #ffffff;
+        --accent-primary: #00ffff;
+        --link-primary: #ff00ff;
+        --border-primary: #00ffff;
+        --button-primary-bg: #000044;
+        --button-primary-hover-bg: #000055;
+        --sidebar-opacity: 1;
+        --content-opacity: 1;
+      }
+      
+    </style>
+  
+
+  
+  <style>
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    
+    [data-theme='dark'] body::before {
+        background-image: none;
+        opacity: 0;
+    }
+    
+    [data-theme='dreamer'] body::before {
+        background-image: none;
+        opacity: 0;
+    }
+    
+    [data-theme='cream-paper'] body::before {
+        background-image: none;
+        opacity: 0;
+    }
+    
+    [data-theme='sunset'] body::before {
+        background-image: none;
+        opacity: 0;
+    }
+    
+    [data-theme='synthwave'] body::before {
+        background-image: none;
+        opacity: 0;
+    }
+    
+  </style>
+
+  
+  <style>
+    :root {
+      --sidebar-width: 17.5rem;
+      --content-width: 65rem;
+      --border-radius: 10px;
+      --border-thickness: 1px;
+      --shadow-thickness: 3px;
+      --card-columns: 2;
+    }
+  </style>
+
+  
+  <script>
+    (function() {
+      
+      var availableThemes = ["dark","dreamer","cream-paper","sunset","synthwave"];
+      
+      var theme = localStorage.getItem('theme');
+      if (!theme && availableThemes.length > 0) {
+        theme = availableThemes[0];
+        localStorage.setItem('theme', theme);
+      }
+      
+      if (theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+      }
+      
+    })();
+  </script>
+
+  
+  <noscript>
+    <style>
+      .waterfall-layout .article-list {
+        opacity: 1;
+      }
+      .waterfall-layout .card-item {
+        position: relative;
+        width: 100%;
+      }
+    </style>
+  </noscript>
+</head>
+
+<body>
+  <div class="wrapper">
+    
+    <button class="sidebar-toggle" aria-label="Toggle sidebar">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+           viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+           class="feather feather-menu">
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <line x1="3" y1="18" x2="21" y2="18" />
+      </svg>
+    </button>
+
+    
+    <aside
+  class="sidebar"
+  style='--sidebar-width: 17.5rem'
+>
+  <div class="sidebar-inner">
+    <a href="http://localhost:1313/" class="logo-container">
+      
+      <span class="logo-text">Simple Cards</span>
+    </a>
+
+    <div class="sidebar-content">
+      <nav class="main-nav">
+        <ul>
+          
+            
+              <li>
+                <a href="/">Posts</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/waterfall/">Waterfall</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/archive/">Archive</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/tags/">️Tags</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/search/">Search</a>
+              </li>
+            
+          
+            
+              <li class="menu-item-has-children">
+                <a href="#" class="menu-toggle" data-target="submenu-categories">
+                  Categories
+                  <span class="submenu-indicator">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                      <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    </svg>
+                  </span>
+                </a>
+                <ul class="submenu" id="submenu-categories">
+                  
+                    
+                      <li class="menu-item-has-children">
+                        <a href="#" class="menu-toggle" data-target="submenu-technology">
+                          Technology
+                          <span class="submenu-indicator">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                              <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            </svg>
+                          </span>
+                        </a>
+                        <ul class="submenu" id="submenu-technology">
+                          
+                            <li>
+                              <a href="/categories/programming/">Programming</a>
+                            </li>
+                          
+                        </ul>
+                      </li>
+                    
+                  
+                </ul>
+              </li>
+            
+          
+        </ul>
+      </nav>
+
+
+      <div class="sidebar-bottom">
+        <div class="sidebar-buttons">
+          <button id="theme-switcher" title="Next theme">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2
+                   2 6.477 2 12c0 2.21.895 4.209 2.343 5.657L12 22z"
+              />
+              <circle cx="7.5" cy="10.5" r="1.5" />
+              <circle cx="12" cy="7" r="1" />
+              <circle cx="16.5" cy="10.5" r="1.5" />
+              <circle cx="15" cy="15" r="1" />
+            </svg>
+          </button>
+        </div>
+        <div class="sidebar-footer">
+          <footer class="site-footer">
+  <p>&copy; 2025 Simple Cards.</p>
+  <p>Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & Simple Cards.</p>
+</footer>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>
+
+    <div class="sidebar-overlay"></div>
+
+    
+    <div class="main-area">
+      <main class="content">
+        
+  <div class="container">
+    <h1 class="list-title">
+      Archive
+      <span class="term-count">(24)</span>
+      <a href="/index.xml" class="rss-icon" title="RSS">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 11a9 9 0 0 1 9 9"></path>
+          <path d="M4 4a16 16 0 0 1 16 16"></path>
+          <circle cx="5" cy="19" r="1"></circle>
+        </svg>
+      </a>
+    </h1>
+
+    <div class="archive-timeline">
+      
+        <div class="archive-year">
+          <h2 class="year-title">2025</h2>
+
+          
+            <div class="archive-month">
+              <h3 class="month-title">November</h3>
+
+              <div class="month-posts">
+                
+                  <div class="archive-item">
+                    <time class="archive-date" datetime="2025-11-03">
+                      11-03
+                    </time>
+                    <a href="http://localhost:1313/posts/test-markdown/" class="archive-title">Markdown 样式测试</a>
+
+                    
+                      <div class="archive-tags">
+                        
+                          <a href="/tags/%E6%B5%8B%E8%AF%95" class="archive-tag">#测试</a>
+                        
+                          <a href="/tags/markdown" class="archive-tag">#Markdown</a>
+                        
+                      </div>
+                    
+                  </div>
+                
+              </div>
+            </div>
+          
+        </div>
+      
+        <div class="archive-year">
+          <h2 class="year-title">2024</h2>
+
+          
+            <div class="archive-month">
+              <h3 class="month-title">November</h3>
+
+              <div class="month-posts">
+                
+                  <div class="archive-item">
+                    <time class="archive-date" datetime="2024-11-05">
+                      11-05
+                    </time>
+                    <a href="http://localhost:1313/waterfall/" class="archive-title">Waterfall Gallery</a>
+
+                    
+                      <div class="archive-tags">
+                        
+                          <a href="/tags/test" class="archive-tag">#test</a>
+                        
+                          <a href="/tags/waterfall" class="archive-tag">#waterfall</a>
+                        
+                      </div>
+                    
+                  </div>
+                
+                  <div class="archive-item">
+                    <time class="archive-date" datetime="2024-11-05">
+                      11-05
+                    </time>
+                    <a href="http://localhost:1313/posts/waterfall-test-1/" class="archive-title">Beautiful Mountain Landscape</a>
+
+                    
+                      <div class="archive-tags">
+                        
+                          <a href="/tags/photography" class="archive-tag">#photography</a>
+                        
+                          <a href="/tags/nature" class="archive-tag">#nature</a>
+                        
+                          <a href="/tags/landscape" class="archive-tag">#landscape</a>
+                        
+                      </div>
+                    
+                  </div>
+                
+                  <div class="archive-item">
+                    <time class="archive-date" datetime="2024-11-04">
+                      11-04
+                    </time>
+                    <a href="http://localhost:1313/posts/shortcode-showcase/" class="archive-title">Shortcode 功能展示</a>
+
+                    
+                      <div class="archive-tags">
+                        
+                          <a href="/tags/shortcode" class="archive-tag">#shortcode</a>
+                        
+                          <a href="/tags/demo" class="archive-tag">#demo</a>
+                        
+                          <a href="/tags/simple-cards" class="archive-tag">#simple-cards</a>
+                        
+                      </div>
+                    
+                  </div>
+                
+                  <div class="archive-item">
+                    <time class="archive-date" datetime="2024-11-04">
+                      11-04
+                    </time>
+                    <a href="http://localhost:1313/posts/waterfall-test-2/" class="archive-title">Modern Architecture Design</a>
+
+                    
+                      <div class="archive-tags">
+                        
+                          <a href="/tags/architecture" class="archive-tag">#architecture</a>
+                        
+                          <a href="/tags/design" class="archive-tag">#design</a>
+                        
+                          <a href="/tags/modern" class="archive-tag">#modern</a>
+                        
+                      </div>
+                    
+                  </div>
+                
+                  <div class="archive-item">
+                    <time class="archive-date" datetime="2024-11-03">
+                      11-03
+                    </time>
+                    <a href="http://localhost:1313/posts/waterfall-test-3/" class="archive-title">Digital Art Revolution</a>
+
+                    
+                      <div class="archive-tags">
+                        
+                          <a href="/tags/digital-art" class="archive-tag">#digital-art</a>
+                        
+                          <a href="/tags/creativity" class="archive-tag">#creativity</a>
+                        
+                          <a href="/tags/technology" class="archive-tag">#technology</a>
+                        
+                      </div>
+                    
+                  </div>
+                
+                  <div class="archive-item">
+                    <time class="archive-date" datetime="2024-11-02">
+                      11-02
+                    </time>
+                    <a href="http://localhost:1313/posts/waterfall-test-4/" class="archive-title">Minimalist Living Philosophy</a>
+
+                    
+                      <div class="archive-tags">
+                        
+                          <a href="/tags/minimalism" class="archive-tag">#minimalism</a>
+                        
+                          <a href="/tags/lifestyle" class="archive-tag">#lifestyle</a>
+                        
+                          <a href="/tags/philosophy" class="archive-tag">#philosophy</a>
+                        
+                      </div>
+                    
+                  </div>
+                
+                  <div class="archive-item">
+                    <time class="archive-date" datetime="2024-11-01">
+                      11-01
+                    </time>
+                    <a href="http://localhost:1313/posts/waterfall-test-5/" class="archive-title">Urban Street Photography</a>
+
+                    
+                      <div class="archive-tags">
+                        
+                          <a href="/tags/photography" class="archive-tag">#photography</a>
+                        
+                          <a href="/tags/urban" class="archive-tag">#urban</a>
+                        
+                          <a href="/tags/street" class="archive-tag">#street</a>
+                        
+                      </div>
+                    
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="archive-month">
+              <h3 class="month-title">October</h3>
+
+              <div class="month-posts">
+                
+                  <div class="archive-item">
+                    <time class="archive-date" datetime="2024-10-30">
+                      10-30
+                    </time>
+                    <a href="http://localhost:1313/posts/waterfall-test-6/" class="archive-title">Culinary Adventures</a>
+
+                    
+                      <div class="archive-tags">
+                        
+                          <a href="/tags/food" class="archive-tag">#food</a>
+                        
+                          <a href="/tags/cooking" class="archive-tag">#cooking</a>
+                        
+                          <a href="/tags/culinary" class="archive-tag">#culinary</a>
+                        
+                      </div>
+                    
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="archive-month">
+              <h3 class="month-title">January</h3>
+
+              <div class="month-posts">
+                
+                  <div class="archive-item">
+                    <time class="archive-date" datetime="2024-01-01">
+                      01-01
+                    </time>
+                    <a href="http://localhost:1313/posts/toc-very-long-test/" class="archive-title">超长目录测试文章</a>
+
+                    
+                      <div class="archive-tags">
+                        
+                          <a href="/tags/test" class="archive-tag">#test</a>
+                        
+                          <a href="/tags/toc" class="archive-tag">#toc</a>
+                        
+                          <a href="/tags/long" class="archive-tag">#long</a>
+                        
+                          <a href="/tags/navigation" class="archive-tag">#navigation</a>
+                        
+                      </div>
+                    
+                  </div>
+                
+              </div>
+            </div>
+          
+        </div>
+      
+        <div class="archive-year">
+          <h2 class="year-title">2023</h2>
+
+          
+            <div class="archive-month">
+              <h3 class="month-title">December</h3>
+
+              <div class="month-posts">
+                
+                  <div class="archive-item">
+                    <time class="archive-date" datetime="2023-12-04">
+                      12-04
+                    </time>
+                    <a href="http://localhost:1313/posts/remote-work-productivity-tips/" class="archive-title">远程工作效率提升技巧</a>
+
+                    
+                      <div class="archive-tags">
+                        
+                          <a href="/tags/%E5%B7%A5%E4%BD%9C" class="archive-tag">#工作</a>
+                        
+                          <a href="/tags/%E6%95%88%E7%8E%87" class="archive-tag">#效率</a>
+                        
+                          <a href="/tags/%E8%BF%9C%E7%A8%8B%E5%8A%9E%E5%85%AC" class="archive-tag">#远程办公</a>
+                        
+                          <a href="/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF" class="archive-tag">#个人成长</a>
+                        
+                          <a href="/tags/%E6%8A%80%E6%9C%AF" class="archive-tag">#技术</a>
+                        
+                      </div>
+                    
+                  </div>
+                
+                  <div class="archive-item">
+                    <time class="archive-date" datetime="2023-12-01">
+                      12-01
+                    </time>
+                    <a href="http://localhost:1313/posts/blockchain-basics/" class="archive-title">区块链基础知识：理解去中心化技术</a>
+
+                    
+                      <div class="archive-tags">
+                        
+                          <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE" class="archive-tag">#区块链</a>
+                        
+                          <a href="/tags/%E6%8A%80%E6%9C%AF" class="archive-tag">#技术</a>
+                        
+                          <a href="/tags/%E5%8A%A0%E5%AF%86%E8%B4%A7%E5%B8%81" class="archive-tag">#加密货币</a>
+                        
+                          <a href="/tags/%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96" class="archive-tag">#去中心化</a>
+                        
+                          <a href="/tags/%E7%BC%96%E7%A8%8B" class="archive-tag">#编程</a>
+                        
+                      </div>
+                    
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="archive-month">
+              <h3 class="month-title">November</h3>
+
+              <div class="month-posts">
+                
+                  <div class="archive-item">
+                    <time class="archive-date" datetime="2023-11-28">
+                      11-28
+                    </time>
+                    <a href="http://localhost:1313/posts/minimalist-living-guide/" class="archive-title">极简生活指南：释放空间，丰富内心</a>
+
+                    
+                      <div class="archive-tags">
+                        
+                          <a href="/tags/%E7%94%9F%E6%B4%BB" class="archive-tag">#生活</a>
+                        
+                          <a href="/tags/%E6%9E%81%E7%AE%80%E4%B8%BB%E4%B9%89" class="archive-tag">#极简主义</a>
+                        
+                          <a href="/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF" class="archive-tag">#个人成长</a>
+                        
+                          <a href="/tags/%E5%93%B2%E5%AD%A6" class="archive-tag">#哲学</a>
+                        
+                      </div>
+                    
+                  </div>
+                
+                  <div class="archive-item">
+                    <time class="archive-date" datetime="2023-11-25">
+                      11-25
+                    </time>
+                    <a href="http://localhost:1313/posts/travel-photography-tips/" class="archive-title">旅行摄影技巧：记录旅途中的美好</a>
+
+                    
+                      <div class="archive-tags">
+                        
+                          <a href="/tags/%E6%97%85%E8%A1%8C" class="archive-tag">#旅行</a>
+                        
+                          <a href="/tags/%E6%91%84%E5%BD%B1" class="archive-tag">#摄影</a>
+                        
+                          <a href="/tags/%E6%88%B7%E5%A4%96" class="archive-tag">#户外</a>
+                        
+                          <a href="/tags/%E7%94%9F%E6%B4%BB" class="archive-tag">#生活</a>
+                        
+                          <a href="/tags/%E6%95%99%E7%A8%8B" class="archive-tag">#教程</a>
+                        
+                      </div>
+                    
+                  </div>
+                
+                  <div class="archive-item">
+                    <time class="archive-date" datetime="2023-11-22">
+                      11-22
+                    </time>
+                    <a href="http://localhost:1313/posts/healthy-eating-guide/" class="archive-title">健康饮食指南：迈向更健康的生活</a>
+
+                    
+                      <div class="archive-tags">
+                        
+                          <a href="/tags/%E5%81%A5%E5%BA%B7" class="archive-tag">#健康</a>
+                        
+                          <a href="/tags/%E9%A5%AE%E9%A3%9F" class="archive-tag">#饮食</a>
+                        
+                          <a href="/tags/%E7%94%9F%E6%B4%BB" class="archive-tag">#生活</a>
+                        
+                          <a href="/tags/%E8%90%A5%E5%85%BB" class="archive-tag">#营养</a>
+                        
+                          <a href="/tags/%E7%BE%8E%E9%A3%9F" class="archive-tag">#美食</a>
+                        
+                      </div>
+                    
+                  </div>
+                
+                  <div class="archive-item">
+                    <time class="archive-date" datetime="2023-11-20">
+                      11-20
+                    </time>
+                    <a href="http://localhost:1313/posts/photography-for-beginners/" class="archive-title">摄影入门：捕捉生活中的美</a>
+
+                    
+                      <div class="archive-tags">
+                        
+                          <a href="/tags/%E6%91%84%E5%BD%B1" class="archive-tag">#摄影</a>
+                        
+                          <a href="/tags/%E8%89%BA%E6%9C%AF" class="archive-tag">#艺术</a>
+                        
+                          <a href="/tags/%E7%94%9F%E6%B4%BB" class="archive-tag">#生活</a>
+                        
+                          <a href="/tags/%E6%95%99%E7%A8%8B" class="archive-tag">#教程</a>
+                        
+                          <a href="/tags/%E6%88%B7%E5%A4%96" class="archive-tag">#户外</a>
+                        
+                      </div>
+                    
+                  </div>
+                
+                  <div class="archive-item">
+                    <time class="archive-date" datetime="2023-11-18">
+                      11-18
+                    </time>
+                    <a href="http://localhost:1313/posts/smart-home-tech-review/" class="archive-title">智能家居技术评测：打造未来生活</a>
+
+                    
+                      <div class="archive-tags">
+                        
+                          <a href="/tags/%E6%99%BA%E8%83%BD%E5%AE%B6%E5%B1%85" class="archive-tag">#智能家居</a>
+                        
+                          <a href="/tags/%E7%A7%91%E6%8A%80" class="archive-tag">#科技</a>
+                        
+                          <a href="/tags/%E7%94%9F%E6%B4%BB" class="archive-tag">#生活</a>
+                        
+                          <a href="/tags/%E8%AF%84%E6%B5%8B" class="archive-tag">#评测</a>
+                        
+                          <a href="/tags/%E6%9C%AA%E6%9D%A5" class="archive-tag">#未来</a>
+                        
+                      </div>
+                    
+                  </div>
+                
+                  <div class="archive-item">
+                    <time class="archive-date" datetime="2023-11-15">
+                      11-15
+                    </time>
+                    <a href="http://localhost:1313/posts/effective-learning-methods/" class="archive-title">高效学习方法：掌握新技能的秘诀</a>
+
+                    
+                      <div class="archive-tags">
+                        
+                          <a href="/tags/%E5%AD%A6%E4%B9%A0" class="archive-tag">#学习</a>
+                        
+                          <a href="/tags/%E6%95%88%E7%8E%87" class="archive-tag">#效率</a>
+                        
+                          <a href="/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF" class="archive-tag">#个人成长</a>
+                        
+                          <a href="/tags/%E6%96%B9%E6%B3%95%E8%AE%BA" class="archive-tag">#方法论</a>
+                        
+                          <a href="/tags/%E7%94%9F%E6%B4%BB" class="archive-tag">#生活</a>
+                        
+                      </div>
+                    
+                  </div>
+                
+                  <div class="archive-item">
+                    <time class="archive-date" datetime="2023-11-12">
+                      11-12
+                    </time>
+                    <a href="http://localhost:1313/posts/art-of-coffee/" class="archive-title">咖啡的艺术：从豆子到杯子</a>
+
+                    
+                      <div class="archive-tags">
+                        
+                          <a href="/tags/%E7%94%9F%E6%B4%BB" class="archive-tag">#生活</a>
+                        
+                          <a href="/tags/%E7%BE%8E%E9%A3%9F" class="archive-tag">#美食</a>
+                        
+                          <a href="/tags/%E5%92%96%E5%95%A1" class="archive-tag">#咖啡</a>
+                        
+                          <a href="/tags/%E6%96%87%E5%8C%96" class="archive-tag">#文化</a>
+                        
+                      </div>
+                    
+                  </div>
+                
+                  <div class="archive-item">
+                    <time class="archive-date" datetime="2023-11-10">
+                      11-10
+                    </time>
+                    <a href="http://localhost:1313/posts/ai-ethics-challenges/" class="archive-title">人工智能伦理：挑战与思考</a>
+
+                    
+                      <div class="archive-tags">
+                        
+                          <a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD" class="archive-tag">#人工智能</a>
+                        
+                          <a href="/tags/%E4%BC%A6%E7%90%86" class="archive-tag">#伦理</a>
+                        
+                          <a href="/tags/%E7%A4%BE%E4%BC%9A" class="archive-tag">#社会</a>
+                        
+                          <a href="/tags/%E6%8A%80%E6%9C%AF" class="archive-tag">#技术</a>
+                        
+                          <a href="/tags/%E6%9C%AA%E6%9D%A5" class="archive-tag">#未来</a>
+                        
+                      </div>
+                    
+                  </div>
+                
+                  <div class="archive-item">
+                    <time class="archive-date" datetime="2023-11-08">
+                      11-08
+                    </time>
+                    <a href="http://localhost:1313/posts/frontend-performance-optimization/" class="archive-title">前端性能优化实践</a>
+
+                    
+                      <div class="archive-tags">
+                        
+                          <a href="/tags/%E5%89%8D%E7%AB%AF" class="archive-tag">#前端</a>
+                        
+                          <a href="/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96" class="archive-tag">#性能优化</a>
+                        
+                          <a href="/tags/web%E5%BC%80%E5%8F%91" class="archive-tag">#Web开发</a>
+                        
+                          <a href="/tags/%E6%8A%80%E6%9C%AF" class="archive-tag">#技术</a>
+                        
+                      </div>
+                    
+                  </div>
+                
+                  <div class="archive-item">
+                    <time class="archive-date" datetime="2023-11-05">
+                      11-05
+                    </time>
+                    <a href="http://localhost:1313/posts/design-patterns-deep-dive/" class="archive-title">深入理解设计模式：读《设计模式》有感</a>
+
+                    
+                      <div class="archive-tags">
+                        
+                          <a href="/tags/%E7%BC%96%E7%A8%8B" class="archive-tag">#编程</a>
+                        
+                          <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F" class="archive-tag">#设计模式</a>
+                        
+                          <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B" class="archive-tag">#软件工程</a>
+                        
+                          <a href="/tags/%E6%8A%80%E6%9C%AF" class="archive-tag">#技术</a>
+                        
+                      </div>
+                    
+                  </div>
+                
+                  <div class="archive-item">
+                    <time class="archive-date" datetime="2023-11-01">
+                      11-01
+                    </time>
+                    <a href="http://localhost:1313/posts/weekend-hiking-urban-oasis/" class="archive-title">周末徒步：发现城市绿洲</a>
+
+                    
+                      <div class="archive-tags">
+                        
+                          <a href="/tags/%E7%94%9F%E6%B4%BB" class="archive-tag">#生活</a>
+                        
+                          <a href="/tags/%E6%88%B7%E5%A4%96" class="archive-tag">#户外</a>
+                        
+                          <a href="/tags/%E6%97%85%E8%A1%8C" class="archive-tag">#旅行</a>
+                        
+                          <a href="/tags/%E5%9F%8E%E5%B8%82" class="archive-tag">#城市</a>
+                        
+                      </div>
+                    
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="archive-month">
+              <h3 class="month-title">October</h3>
+
+              <div class="month-posts">
+                
+                  <div class="archive-item">
+                    <time class="archive-date" datetime="2023-10-26">
+                      10-26
+                    </time>
+                    <a href="http://localhost:1313/posts/go-concurrency-intro/" class="archive-title">Go语言并发编程入门</a>
+
+                    
+                      <div class="archive-tags">
+                        
+                          <a href="/tags/go" class="archive-tag">#Go</a>
+                        
+                          <a href="/tags/%E7%BC%96%E7%A8%8B" class="archive-tag">#编程</a>
+                        
+                          <a href="/tags/%E5%B9%B6%E5%8F%91" class="archive-tag">#并发</a>
+                        
+                          <a href="/tags/%E6%8A%80%E6%9C%AF" class="archive-tag">#技术</a>
+                        
+                      </div>
+                    
+                  </div>
+                
+              </div>
+            </div>
+          
+        </div>
+      
+    </div>
+  </div>
+
+        </main>
+      <aside class="widgets">
+        
+<a href="#top" class="back-to-top" id="back-to-top">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</a>
+
+      </aside>
+    </div>
+  </div>
+
+  
+  
+  <script>
+    
+    window.styleConfig = "{\"border_radius\":\"10px\",\"border_thickness\":\"1px\",\"card_columns\":2,\"content_width\":\"65rem\",\"shadow_thickness\":\"3px\",\"sidebar_width\":\"17.5rem\"}";
+    
+    
+    window.availableThemes = ["dark","dreamer","cream-paper","sunset","synthwave"];
+    
+    
+    
+    (function() {
+      let theme = localStorage.getItem('theme');
+      if (!theme && window.availableThemes && window.availableThemes.length > 0) {
+        theme = window.availableThemes[0];
+        localStorage.setItem('theme', theme);
+      }
+      if (theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        window.currentThemeName = theme;
+      }
+    })();
+  </script>
+
+  
+  <script src="http://localhost:1313/js/main.min.b9748a8941a497381787c425905f015004b1dd6ab2463885a5c33b15e9e16edb.js" defer></script>
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    <script src="http://localhost:1313/js/anchor-links.min.8491553b31a2d4427b943211282b7dd4ac5244264033b8a21854cf30fbcc7679.js" defer></script>
+  
+</body>
+</html>

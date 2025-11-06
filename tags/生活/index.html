@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>生活 | Simple Cards</title>
+  <meta name="generator" content="Hugo 0.152.2">
+
+  
+  
+  <link rel="stylesheet" href="http://localhost:1313/scss/main.min.f2eaa26d682e91380e47d7af0a7eb968d44c7ac3b8657e7de6f96a901552a257.css">
+
+  
+    
+    
+
+    
+      
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bungee&amp;display=swap" rel="stylesheet">
+        <style>
+          :root {
+            
+            
+            --title-font: 'Bungee', sans-serif;
+          }
+        </style>
+      
+    
+
+    
+    <style>
+      
+      [data-theme='dark'] {
+        --bg-primary: #1a202c;
+        --bg-secondary: #2d3748;
+        --text-primary: #e2e8f0;
+        --accent-primary: #63b3ed;
+        --link-primary: #63b3ed;
+        --border-primary: #4a5568;
+        --button-primary-bg: #4a5568;
+        --button-primary-hover-bg: #2d3748;
+        --sidebar-opacity: 1;
+        --content-opacity: 1;
+      }
+      
+      [data-theme='dreamer'] {
+        --bg-primary: #1e1c2f;
+        --bg-secondary: #2c2a3f;
+        --text-primary: #c3c0d1;
+        --accent-primary: #82f5a0;
+        --link-primary: #a390f5;
+        --border-primary: #43405e;
+        --button-primary-bg: #37344e;
+        --button-primary-hover-bg: #43405e;
+        --sidebar-opacity: 1;
+        --content-opacity: 1;
+      }
+      
+      [data-theme='cream-paper'] {
+        --bg-primary: #f6f1e9;
+        --bg-secondary: #fdfaf4;
+        --text-primary: #3b3b3b;
+        --accent-primary: #2a6f97;
+        --link-primary: #2a6f97;
+        --border-primary: #dcd6c8;
+        --button-primary-bg: #e8e2d9;
+        --button-primary-hover-bg: #f3ede3;
+        --sidebar-opacity: 1;
+        --content-opacity: 1;
+      }
+      
+      [data-theme='sunset'] {
+        --bg-primary: #3a294a;
+        --bg-secondary: #2e203c;
+        --text-primary: #f8c5d8;
+        --accent-primary: #ff8fab;
+        --link-primary: #ff8fab;
+        --border-primary: #4a395a;
+        --button-primary-bg: #4a395a;
+        --button-primary-hover-bg: #5a496a;
+        --sidebar-opacity: 1;
+        --content-opacity: 1;
+      }
+      
+      [data-theme='synthwave'] {
+        --bg-primary: #000022;
+        --bg-secondary: #000033;
+        --text-primary: #ffffff;
+        --accent-primary: #00ffff;
+        --link-primary: #ff00ff;
+        --border-primary: #00ffff;
+        --button-primary-bg: #000044;
+        --button-primary-hover-bg: #000055;
+        --sidebar-opacity: 1;
+        --content-opacity: 1;
+      }
+      
+    </style>
+  
+
+  
+  <style>
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    
+    [data-theme='dark'] body::before {
+        background-image: none;
+        opacity: 0;
+    }
+    
+    [data-theme='dreamer'] body::before {
+        background-image: none;
+        opacity: 0;
+    }
+    
+    [data-theme='cream-paper'] body::before {
+        background-image: none;
+        opacity: 0;
+    }
+    
+    [data-theme='sunset'] body::before {
+        background-image: none;
+        opacity: 0;
+    }
+    
+    [data-theme='synthwave'] body::before {
+        background-image: none;
+        opacity: 0;
+    }
+    
+  </style>
+
+  
+  <style>
+    :root {
+      --sidebar-width: 17.5rem;
+      --content-width: 65rem;
+      --border-radius: 10px;
+      --border-thickness: 1px;
+      --shadow-thickness: 3px;
+      --card-columns: 2;
+    }
+  </style>
+
+  
+  <script>
+    (function() {
+      
+      var availableThemes = ["dark","dreamer","cream-paper","sunset","synthwave"];
+      
+      var theme = localStorage.getItem('theme');
+      if (!theme && availableThemes.length > 0) {
+        theme = availableThemes[0];
+        localStorage.setItem('theme', theme);
+      }
+      
+      if (theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+      }
+      
+    })();
+  </script>
+
+  
+  <noscript>
+    <style>
+      .waterfall-layout .article-list {
+        opacity: 1;
+      }
+      .waterfall-layout .card-item {
+        position: relative;
+        width: 100%;
+      }
+    </style>
+  </noscript>
+</head>
+
+<body>
+  <div class="wrapper">
+    
+    <button class="sidebar-toggle" aria-label="Toggle sidebar">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+           viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+           class="feather feather-menu">
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <line x1="3" y1="18" x2="21" y2="18" />
+      </svg>
+    </button>
+
+    
+    <aside
+  class="sidebar"
+  style='--sidebar-width: 17.5rem'
+>
+  <div class="sidebar-inner">
+    <a href="http://localhost:1313/" class="logo-container">
+      
+      <span class="logo-text">Simple Cards</span>
+    </a>
+
+    <div class="sidebar-content">
+      <nav class="main-nav">
+        <ul>
+          
+            
+              <li>
+                <a href="/">Posts</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/waterfall/">Waterfall</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/archive/">Archive</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/tags/">️Tags</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/search/">Search</a>
+              </li>
+            
+          
+            
+              <li class="menu-item-has-children">
+                <a href="#" class="menu-toggle" data-target="submenu-categories">
+                  Categories
+                  <span class="submenu-indicator">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                      <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    </svg>
+                  </span>
+                </a>
+                <ul class="submenu" id="submenu-categories">
+                  
+                    
+                      <li class="menu-item-has-children">
+                        <a href="#" class="menu-toggle" data-target="submenu-technology">
+                          Technology
+                          <span class="submenu-indicator">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                              <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            </svg>
+                          </span>
+                        </a>
+                        <ul class="submenu" id="submenu-technology">
+                          
+                            <li>
+                              <a href="/categories/programming/">Programming</a>
+                            </li>
+                          
+                        </ul>
+                      </li>
+                    
+                  
+                </ul>
+              </li>
+            
+          
+        </ul>
+      </nav>
+
+
+      <div class="sidebar-bottom">
+        <div class="sidebar-buttons">
+          <button id="theme-switcher" title="Next theme">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2
+                   2 6.477 2 12c0 2.21.895 4.209 2.343 5.657L12 22z"
+              />
+              <circle cx="7.5" cy="10.5" r="1.5" />
+              <circle cx="12" cy="7" r="1" />
+              <circle cx="16.5" cy="10.5" r="1.5" />
+              <circle cx="15" cy="15" r="1" />
+            </svg>
+          </button>
+        </div>
+        <div class="sidebar-footer">
+          <footer class="site-footer">
+  <p>&copy; 2025 Simple Cards.</p>
+  <p>Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & Simple Cards.</p>
+</footer>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>
+
+    <div class="sidebar-overlay"></div>
+
+    
+    <div class="main-area">
+      <main class="content">
+        
+  <div class="container taxonomy-container">
+    <h1 class="list-title">
+      生活
+      <span class="term-count">(8)</span>
+      <a href="http://localhost:1313/tags/%E7%94%9F%E6%B4%BB/index.xml" class="rss-icon" title="RSS">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 11a9 9 0 0 1 9 9"></path>
+            <path d="M4 4a16 16 0 0 1 16 16"></path>
+          <circle cx="5" cy="19" r="1"></circle>
+        </svg>
+      </a>
+    </h1>
+
+    <div class="article-list single-column">
+      
+        
+
+
+
+<div class="card-item">
+  
+  
+  <div class="card-content">
+    <div class="card-header">
+      <a href="http://localhost:1313/posts/minimalist-living-guide/" class="card-title">极简生活指南：释放空间，丰富内心</a>
+    </div>
+
+    
+      <div class="card-preview">
+        <p class="card-summary">极简生活指南：释放空间，丰富内心#极简主义不仅仅是一种生活方式，更是一种思维模式。它鼓励我们审视自己的拥有，减少不必要的物质和精神负担，从而为真正重要的事情腾出空间。
+为什么选择极简生活？#...</p>
+      </div>
+    
+
+    <div class="article-meta">
+        <div class="article-meta">
+  <time datetime="2023-11-28">
+    Nov 28, 2023
+  </time>
+
+  
+    <span class="tags">
+      
+        <a href="/tags/%E7%94%9F%E6%B4%BB">#生活</a>
+      
+        <a href="/tags/%E6%9E%81%E7%AE%80%E4%B8%BB%E4%B9%89">#极简主义</a>
+      
+        <a href="/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF">#个人成长</a>
+      
+        <a href="/tags/%E5%93%B2%E5%AD%A6">#哲学</a>
+      
+    </span>
+  
+</div>
+    </div>
+  </div>
+</div>
+
+      
+        
+
+
+  
+
+
+<div class="card-item has-image">
+  
+    <div class="card-image">
+      <img src="https://picsum.photos/seed/travel-photography/800/400.jpg" alt="旅行摄影技巧：记录旅途中的美好" loading="lazy">
+    </div>
+  
+  
+  <div class="card-content">
+    <div class="card-header">
+      <a href="http://localhost:1313/posts/travel-photography-tips/" class="card-title">旅行摄影技巧：记录旅途中的美好</a>
+    </div>
+
+    
+      <div class="card-preview">
+        <p class="card-summary">旅行摄影技巧：记录旅途中的美好#旅行不仅是放松身心的过程，更是发现和记录美好的机会。掌握一些旅行摄影技巧，能让你的旅途回忆更加生动和珍贵。
+1. 提前规划与观察#研究目的地：了解当地的文化、...</p>
+      </div>
+    
+
+    <div class="article-meta">
+        <div class="article-meta">
+  <time datetime="2023-11-25">
+    Nov 25, 2023
+  </time>
+
+  
+    <span class="tags">
+      
+        <a href="/tags/%E6%97%85%E8%A1%8C">#旅行</a>
+      
+        <a href="/tags/%E6%91%84%E5%BD%B1">#摄影</a>
+      
+        <a href="/tags/%E6%88%B7%E5%A4%96">#户外</a>
+      
+        <a href="/tags/%E7%94%9F%E6%B4%BB">#生活</a>
+      
+        <a href="/tags/%E6%95%99%E7%A8%8B">#教程</a>
+      
+    </span>
+  
+</div>
+    </div>
+  </div>
+</div>
+
+      
+        
+
+
+
+<div class="card-item">
+  
+  
+  <div class="card-content">
+    <div class="card-header">
+      <a href="http://localhost:1313/posts/healthy-eating-guide/" class="card-title">健康饮食指南：迈向更健康的生活</a>
+    </div>
+
+    
+      <div class="card-preview">
+        <p class="card-summary">健康饮食指南：迈向更健康的生活#健康饮食是维持身体健康、预防疾病的基础。它不仅仅是关于吃什么，更是关于如何吃，以及建立可持续的饮食习惯。
+1. 多样化饮食#全谷物：选择糙米、全麦面包、燕麦等...</p>
+      </div>
+    
+
+    <div class="article-meta">
+        <div class="article-meta">
+  <time datetime="2023-11-22">
+    Nov 22, 2023
+  </time>
+
+  
+    <span class="tags">
+      
+        <a href="/tags/%E5%81%A5%E5%BA%B7">#健康</a>
+      
+        <a href="/tags/%E9%A5%AE%E9%A3%9F">#饮食</a>
+      
+        <a href="/tags/%E7%94%9F%E6%B4%BB">#生活</a>
+      
+        <a href="/tags/%E8%90%A5%E5%85%BB">#营养</a>
+      
+        <a href="/tags/%E7%BE%8E%E9%A3%9F">#美食</a>
+      
+    </span>
+  
+</div>
+    </div>
+  </div>
+</div>
+
+      
+        
+
+
+  
+
+
+<div class="card-item has-image">
+  
+    <div class="card-image">
+      <img src="https://picsum.photos/seed/photography-beginner/800/400.jpg" alt="摄影入门：捕捉生活中的美" loading="lazy">
+    </div>
+  
+  
+  <div class="card-content">
+    <div class="card-header">
+      <a href="http://localhost:1313/posts/photography-for-beginners/" class="card-title">摄影入门：捕捉生活中的美</a>
+    </div>
+
+    
+      <div class="card-preview">
+        <p class="card-summary">摄影入门：捕捉生活中的美#摄影是一门艺术，也是一种记录生活的方式。即使没有专业的设备，你也可以通过一些简单的技巧，捕捉到生活中那些转瞬即逝的美好瞬间。
+1. 了解你的相机#无论是手机相机还是...</p>
+      </div>
+    
+
+    <div class="article-meta">
+        <div class="article-meta">
+  <time datetime="2023-11-20">
+    Nov 20, 2023
+  </time>
+
+  
+    <span class="tags">
+      
+        <a href="/tags/%E6%91%84%E5%BD%B1">#摄影</a>
+      
+        <a href="/tags/%E8%89%BA%E6%9C%AF">#艺术</a>
+      
+        <a href="/tags/%E7%94%9F%E6%B4%BB">#生活</a>
+      
+        <a href="/tags/%E6%95%99%E7%A8%8B">#教程</a>
+      
+        <a href="/tags/%E6%88%B7%E5%A4%96">#户外</a>
+      
+    </span>
+  
+</div>
+    </div>
+  </div>
+</div>
+
+      
+        
+
+
+
+<div class="card-item">
+  
+  
+  <div class="card-content">
+    <div class="card-header">
+      <a href="http://localhost:1313/posts/smart-home-tech-review/" class="card-title">智能家居技术评测：打造未来生活</a>
+    </div>
+
+    
+      <div class="card-preview">
+        <p class="card-summary">智能家居技术评测：打造未来生活#智能家居正逐渐从概念走向现实，为我们的生活带来前所未有的便利和舒适。本文将评测几款热门的智能家居设备，帮助你打造理想的未来生活。
+1. 智能音箱：家庭控制中心#...</p>
+      </div>
+    
+
+    <div class="article-meta">
+        <div class="article-meta">
+  <time datetime="2023-11-18">
+    Nov 18, 2023
+  </time>
+
+  
+    <span class="tags">
+      
+        <a href="/tags/%E6%99%BA%E8%83%BD%E5%AE%B6%E5%B1%85">#智能家居</a>
+      
+        <a href="/tags/%E7%A7%91%E6%8A%80">#科技</a>
+      
+        <a href="/tags/%E7%94%9F%E6%B4%BB">#生活</a>
+      
+        <a href="/tags/%E8%AF%84%E6%B5%8B">#评测</a>
+      
+        <a href="/tags/%E6%9C%AA%E6%9D%A5">#未来</a>
+      
+    </span>
+  
+</div>
+    </div>
+  </div>
+</div>
+
+      
+        
+
+
+
+<div class="card-item">
+  
+  
+  <div class="card-content">
+    <div class="card-header">
+      <a href="http://localhost:1313/posts/effective-learning-methods/" class="card-title">高效学习方法：掌握新技能的秘诀</a>
+    </div>
+
+    
+      <div class="card-preview">
+        <p class="card-summary">高效学习方法：掌握新技能的秘诀#在快速变化的时代，持续学习和掌握新技能变得尤为重要。然而，如何高效学习，避免“假性学习”的陷阱，是许多人面临的挑战。本文将分享一些被证明有效的高效学习方法。
+1....</p>
+      </div>
+    
+
+    <div class="article-meta">
+        <div class="article-meta">
+  <time datetime="2023-11-15">
+    Nov 15, 2023
+  </time>
+
+  
+    <span class="tags">
+      
+        <a href="/tags/%E5%AD%A6%E4%B9%A0">#学习</a>
+      
+        <a href="/tags/%E6%95%88%E7%8E%87">#效率</a>
+      
+        <a href="/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF">#个人成长</a>
+      
+        <a href="/tags/%E6%96%B9%E6%B3%95%E8%AE%BA">#方法论</a>
+      
+        <a href="/tags/%E7%94%9F%E6%B4%BB">#生活</a>
+      
+    </span>
+  
+</div>
+    </div>
+  </div>
+</div>
+
+      
+        
+
+
+  
+
+
+<div class="card-item has-image">
+  
+    <div class="card-image">
+      <img src="https://picsum.photos/seed/coffee-art/800/400.jpg" alt="咖啡的艺术：从豆子到杯子" loading="lazy">
+    </div>
+  
+  
+  <div class="card-content">
+    <div class="card-header">
+      <a href="http://localhost:1313/posts/art-of-coffee/" class="card-title">咖啡的艺术：从豆子到杯子</a>
+    </div>
+
+    
+      <div class="card-preview">
+        <p class="card-summary">咖啡的艺术：从豆子到杯子#咖啡不仅仅是一种饮品，更是一种艺术，一种生活方式。从咖啡豆的种植、采摘、烘焙，到最终冲泡成一杯香醇的咖啡，每一个环节都充满了匠心。
+咖啡豆的起源与种类#咖啡的起源可...</p>
+      </div>
+    
+
+    <div class="article-meta">
+        <div class="article-meta">
+  <time datetime="2023-11-12">
+    Nov 12, 2023
+  </time>
+
+  
+    <span class="tags">
+      
+        <a href="/tags/%E7%94%9F%E6%B4%BB">#生活</a>
+      
+        <a href="/tags/%E7%BE%8E%E9%A3%9F">#美食</a>
+      
+        <a href="/tags/%E5%92%96%E5%95%A1">#咖啡</a>
+      
+        <a href="/tags/%E6%96%87%E5%8C%96">#文化</a>
+      
+    </span>
+  
+</div>
+    </div>
+  </div>
+</div>
+
+      
+        
+
+
+
+<div class="card-item">
+  
+  
+  <div class="card-content">
+    <div class="card-header">
+      <a href="http://localhost:1313/posts/weekend-hiking-urban-oasis/" class="card-title">周末徒步：发现城市绿洲</a>
+    </div>
+
+    
+      <div class="card-preview">
+        <p class="card-summary">周末徒步：发现城市绿洲#在繁忙的都市生活中，寻找一片宁静的绿洲进行徒步，是放松身心的绝佳方式。上周末，我探索了城市边缘的一条鲜为人知的徒步路线，收获颇丰。
+路线概览#这条路线位于城市公园的深...</p>
+      </div>
+    
+
+    <div class="article-meta">
+        <div class="article-meta">
+  <time datetime="2023-11-01">
+    Nov 1, 2023
+  </time>
+
+  
+    <span class="tags">
+      
+        <a href="/tags/%E7%94%9F%E6%B4%BB">#生活</a>
+      
+        <a href="/tags/%E6%88%B7%E5%A4%96">#户外</a>
+      
+        <a href="/tags/%E6%97%85%E8%A1%8C">#旅行</a>
+      
+        <a href="/tags/%E5%9F%8E%E5%B8%82">#城市</a>
+      
+    </span>
+  
+</div>
+    </div>
+  </div>
+</div>
+
+      
+    </div>
+
+    
+
+
+  </div>
+
+        </main>
+      <aside class="widgets">
+        
+<a href="#top" class="back-to-top" id="back-to-top">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</a>
+
+      </aside>
+    </div>
+  </div>
+
+  
+  
+  <script>
+    
+    window.styleConfig = "{\"border_radius\":\"10px\",\"border_thickness\":\"1px\",\"card_columns\":2,\"content_width\":\"65rem\",\"shadow_thickness\":\"3px\",\"sidebar_width\":\"17.5rem\"}";
+    
+    
+    window.availableThemes = ["dark","dreamer","cream-paper","sunset","synthwave"];
+    
+    
+    
+    (function() {
+      let theme = localStorage.getItem('theme');
+      if (!theme && window.availableThemes && window.availableThemes.length > 0) {
+        theme = window.availableThemes[0];
+        localStorage.setItem('theme', theme);
+      }
+      if (theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        window.currentThemeName = theme;
+      }
+    })();
+  </script>
+
+  
+  <script src="http://localhost:1313/js/main.min.b9748a8941a497381787c425905f015004b1dd6ab2463885a5c33b15e9e16edb.js" defer></script>
+  
+  
+  
+  
+  
+  
+  
+  
+</body>
+</html>

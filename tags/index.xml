@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Simple Cards</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on Simple Cards</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 03 Nov 2025 09:20:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Markdown</title>
+      <link>http://localhost:1313/tags/markdown/</link>
+      <pubDate>Mon, 03 Nov 2025 09:20:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/markdown/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>测试</title>
+      <link>http://localhost:1313/tags/%E6%B5%8B%E8%AF%95/</link>
+      <pubDate>Mon, 03 Nov 2025 09:20:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E6%B5%8B%E8%AF%95/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Landscape</title>
+      <link>http://localhost:1313/tags/landscape/</link>
+      <pubDate>Tue, 05 Nov 2024 17:45:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/landscape/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nature</title>
+      <link>http://localhost:1313/tags/nature/</link>
+      <pubDate>Tue, 05 Nov 2024 17:45:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/nature/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Photography</title>
+      <link>http://localhost:1313/tags/photography/</link>
+      <pubDate>Tue, 05 Nov 2024 17:45:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/photography/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Test</title>
+      <link>http://localhost:1313/tags/test/</link>
+      <pubDate>Tue, 05 Nov 2024 17:45:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/test/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Waterfall</title>
+      <link>http://localhost:1313/tags/waterfall/</link>
+      <pubDate>Tue, 05 Nov 2024 17:45:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/waterfall/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Demo</title>
+      <link>http://localhost:1313/tags/demo/</link>
+      <pubDate>Mon, 04 Nov 2024 19:27:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/demo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Shortcode</title>
+      <link>http://localhost:1313/tags/shortcode/</link>
+      <pubDate>Mon, 04 Nov 2024 19:27:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/shortcode/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Simple-Cards</title>
+      <link>http://localhost:1313/tags/simple-cards/</link>
+      <pubDate>Mon, 04 Nov 2024 19:27:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/simple-cards/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Architecture</title>
+      <link>http://localhost:1313/tags/architecture/</link>
+      <pubDate>Mon, 04 Nov 2024 17:45:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/architecture/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Design</title>
+      <link>http://localhost:1313/tags/design/</link>
+      <pubDate>Mon, 04 Nov 2024 17:45:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/design/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Modern</title>
+      <link>http://localhost:1313/tags/modern/</link>
+      <pubDate>Mon, 04 Nov 2024 17:45:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/modern/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Creativity</title>
+      <link>http://localhost:1313/tags/creativity/</link>
+      <pubDate>Sun, 03 Nov 2024 17:45:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/creativity/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Digital-Art</title>
+      <link>http://localhost:1313/tags/digital-art/</link>
+      <pubDate>Sun, 03 Nov 2024 17:45:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/digital-art/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Technology</title>
+      <link>http://localhost:1313/tags/technology/</link>
+      <pubDate>Sun, 03 Nov 2024 17:45:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/technology/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lifestyle</title>
+      <link>http://localhost:1313/tags/lifestyle/</link>
+      <pubDate>Sat, 02 Nov 2024 17:45:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/lifestyle/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Minimalism</title>
+      <link>http://localhost:1313/tags/minimalism/</link>
+      <pubDate>Sat, 02 Nov 2024 17:45:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/minimalism/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Philosophy</title>
+      <link>http://localhost:1313/tags/philosophy/</link>
+      <pubDate>Sat, 02 Nov 2024 17:45:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/philosophy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Street</title>
+      <link>http://localhost:1313/tags/street/</link>
+      <pubDate>Fri, 01 Nov 2024 17:45:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/street/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Urban</title>
+      <link>http://localhost:1313/tags/urban/</link>
+      <pubDate>Fri, 01 Nov 2024 17:45:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/urban/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cooking</title>
+      <link>http://localhost:1313/tags/cooking/</link>
+      <pubDate>Wed, 30 Oct 2024 17:45:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/cooking/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Culinary</title>
+      <link>http://localhost:1313/tags/culinary/</link>
+      <pubDate>Wed, 30 Oct 2024 17:45:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/culinary/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Food</title>
+      <link>http://localhost:1313/tags/food/</link>
+      <pubDate>Wed, 30 Oct 2024 17:45:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/food/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Long</title>
+      <link>http://localhost:1313/tags/long/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/long/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Navigation</title>
+      <link>http://localhost:1313/tags/navigation/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/navigation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Toc</title>
+      <link>http://localhost:1313/tags/toc/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/toc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>个人成长</title>
+      <link>http://localhost:1313/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/</link>
+      <pubDate>Mon, 04 Dec 2023 09:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>工作</title>
+      <link>http://localhost:1313/tags/%E5%B7%A5%E4%BD%9C/</link>
+      <pubDate>Mon, 04 Dec 2023 09:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E5%B7%A5%E4%BD%9C/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>技术</title>
+      <link>http://localhost:1313/tags/%E6%8A%80%E6%9C%AF/</link>
+      <pubDate>Mon, 04 Dec 2023 09:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E6%8A%80%E6%9C%AF/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>效率</title>
+      <link>http://localhost:1313/tags/%E6%95%88%E7%8E%87/</link>
+      <pubDate>Mon, 04 Dec 2023 09:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E6%95%88%E7%8E%87/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>远程办公</title>
+      <link>http://localhost:1313/tags/%E8%BF%9C%E7%A8%8B%E5%8A%9E%E5%85%AC/</link>
+      <pubDate>Mon, 04 Dec 2023 09:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E8%BF%9C%E7%A8%8B%E5%8A%9E%E5%85%AC/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>加密货币</title>
+      <link>http://localhost:1313/tags/%E5%8A%A0%E5%AF%86%E8%B4%A7%E5%B8%81/</link>
+      <pubDate>Fri, 01 Dec 2023 11:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E5%8A%A0%E5%AF%86%E8%B4%A7%E5%B8%81/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>区块链</title>
+      <link>http://localhost:1313/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/</link>
+      <pubDate>Fri, 01 Dec 2023 11:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>去中心化</title>
+      <link>http://localhost:1313/tags/%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96/</link>
+      <pubDate>Fri, 01 Dec 2023 11:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>编程</title>
+      <link>http://localhost:1313/tags/%E7%BC%96%E7%A8%8B/</link>
+      <pubDate>Fri, 01 Dec 2023 11:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E7%BC%96%E7%A8%8B/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>哲学</title>
+      <link>http://localhost:1313/tags/%E5%93%B2%E5%AD%A6/</link>
+      <pubDate>Tue, 28 Nov 2023 10:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E5%93%B2%E5%AD%A6/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>极简主义</title>
+      <link>http://localhost:1313/tags/%E6%9E%81%E7%AE%80%E4%B8%BB%E4%B9%89/</link>
+      <pubDate>Tue, 28 Nov 2023 10:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E6%9E%81%E7%AE%80%E4%B8%BB%E4%B9%89/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>生活</title>
+      <link>http://localhost:1313/tags/%E7%94%9F%E6%B4%BB/</link>
+      <pubDate>Tue, 28 Nov 2023 10:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E7%94%9F%E6%B4%BB/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>户外</title>
+      <link>http://localhost:1313/tags/%E6%88%B7%E5%A4%96/</link>
+      <pubDate>Sat, 25 Nov 2023 14:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E6%88%B7%E5%A4%96/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>摄影</title>
+      <link>http://localhost:1313/tags/%E6%91%84%E5%BD%B1/</link>
+      <pubDate>Sat, 25 Nov 2023 14:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E6%91%84%E5%BD%B1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>教程</title>
+      <link>http://localhost:1313/tags/%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Sat, 25 Nov 2023 14:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E6%95%99%E7%A8%8B/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>旅行</title>
+      <link>http://localhost:1313/tags/%E6%97%85%E8%A1%8C/</link>
+      <pubDate>Sat, 25 Nov 2023 14:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E6%97%85%E8%A1%8C/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>健康</title>
+      <link>http://localhost:1313/tags/%E5%81%A5%E5%BA%B7/</link>
+      <pubDate>Wed, 22 Nov 2023 09:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E5%81%A5%E5%BA%B7/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>美食</title>
+      <link>http://localhost:1313/tags/%E7%BE%8E%E9%A3%9F/</link>
+      <pubDate>Wed, 22 Nov 2023 09:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E7%BE%8E%E9%A3%9F/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>营养</title>
+      <link>http://localhost:1313/tags/%E8%90%A5%E5%85%BB/</link>
+      <pubDate>Wed, 22 Nov 2023 09:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E8%90%A5%E5%85%BB/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>饮食</title>
+      <link>http://localhost:1313/tags/%E9%A5%AE%E9%A3%9F/</link>
+      <pubDate>Wed, 22 Nov 2023 09:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E9%A5%AE%E9%A3%9F/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>艺术</title>
+      <link>http://localhost:1313/tags/%E8%89%BA%E6%9C%AF/</link>
+      <pubDate>Mon, 20 Nov 2023 11:30:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E8%89%BA%E6%9C%AF/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>智能家居</title>
+      <link>http://localhost:1313/tags/%E6%99%BA%E8%83%BD%E5%AE%B6%E5%B1%85/</link>
+      <pubDate>Sat, 18 Nov 2023 13:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E6%99%BA%E8%83%BD%E5%AE%B6%E5%B1%85/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>未来</title>
+      <link>http://localhost:1313/tags/%E6%9C%AA%E6%9D%A5/</link>
+      <pubDate>Sat, 18 Nov 2023 13:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E6%9C%AA%E6%9D%A5/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>科技</title>
+      <link>http://localhost:1313/tags/%E7%A7%91%E6%8A%80/</link>
+      <pubDate>Sat, 18 Nov 2023 13:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E7%A7%91%E6%8A%80/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>评测</title>
+      <link>http://localhost:1313/tags/%E8%AF%84%E6%B5%8B/</link>
+      <pubDate>Sat, 18 Nov 2023 13:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E8%AF%84%E6%B5%8B/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>学习</title>
+      <link>http://localhost:1313/tags/%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Wed, 15 Nov 2023 10:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E5%AD%A6%E4%B9%A0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>方法论</title>
+      <link>http://localhost:1313/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/</link>
+      <pubDate>Wed, 15 Nov 2023 10:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>咖啡</title>
+      <link>http://localhost:1313/tags/%E5%92%96%E5%95%A1/</link>
+      <pubDate>Sun, 12 Nov 2023 15:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E5%92%96%E5%95%A1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>文化</title>
+      <link>http://localhost:1313/tags/%E6%96%87%E5%8C%96/</link>
+      <pubDate>Sun, 12 Nov 2023 15:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E6%96%87%E5%8C%96/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>人工智能</title>
+      <link>http://localhost:1313/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</link>
+      <pubDate>Fri, 10 Nov 2023 09:30:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>伦理</title>
+      <link>http://localhost:1313/tags/%E4%BC%A6%E7%90%86/</link>
+      <pubDate>Fri, 10 Nov 2023 09:30:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E4%BC%A6%E7%90%86/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>社会</title>
+      <link>http://localhost:1313/tags/%E7%A4%BE%E4%BC%9A/</link>
+      <pubDate>Fri, 10 Nov 2023 09:30:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E7%A4%BE%E4%BC%9A/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web开发</title>
+      <link>http://localhost:1313/tags/web%E5%BC%80%E5%8F%91/</link>
+      <pubDate>Wed, 08 Nov 2023 11:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/web%E5%BC%80%E5%8F%91/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>前端</title>
+      <link>http://localhost:1313/tags/%E5%89%8D%E7%AB%AF/</link>
+      <pubDate>Wed, 08 Nov 2023 11:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E5%89%8D%E7%AB%AF/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>性能优化</title>
+      <link>http://localhost:1313/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</link>
+      <pubDate>Wed, 08 Nov 2023 11:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>设计模式</title>
+      <link>http://localhost:1313/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Sun, 05 Nov 2023 09:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>软件工程</title>
+      <link>http://localhost:1313/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/</link>
+      <pubDate>Sun, 05 Nov 2023 09:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>城市</title>
+      <link>http://localhost:1313/tags/%E5%9F%8E%E5%B8%82/</link>
+      <pubDate>Wed, 01 Nov 2023 14:30:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E5%9F%8E%E5%B8%82/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Go</title>
+      <link>http://localhost:1313/tags/go/</link>
+      <pubDate>Thu, 26 Oct 2023 10:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/go/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>并发</title>
+      <link>http://localhost:1313/tags/%E5%B9%B6%E5%8F%91/</link>
+      <pubDate>Thu, 26 Oct 2023 10:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E5%B9%B6%E5%8F%91/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

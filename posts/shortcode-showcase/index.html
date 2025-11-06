@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shortcode 功能展示 | Simple Cards</title>
+  <meta name="generator" content="Hugo 0.152.2">
+
+  
+  
+  <link rel="stylesheet" href="http://localhost:1313/scss/main.min.f2eaa26d682e91380e47d7af0a7eb968d44c7ac3b8657e7de6f96a901552a257.css">
+
+  
+    
+    
+
+    
+      
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bungee&amp;display=swap" rel="stylesheet">
+        <style>
+          :root {
+            
+            
+            --title-font: 'Bungee', sans-serif;
+          }
+        </style>
+      
+    
+
+    
+    <style>
+      
+      [data-theme='dark'] {
+        --bg-primary: #1a202c;
+        --bg-secondary: #2d3748;
+        --text-primary: #e2e8f0;
+        --accent-primary: #63b3ed;
+        --link-primary: #63b3ed;
+        --border-primary: #4a5568;
+        --button-primary-bg: #4a5568;
+        --button-primary-hover-bg: #2d3748;
+        --sidebar-opacity: 1;
+        --content-opacity: 1;
+      }
+      
+      [data-theme='dreamer'] {
+        --bg-primary: #1e1c2f;
+        --bg-secondary: #2c2a3f;
+        --text-primary: #c3c0d1;
+        --accent-primary: #82f5a0;
+        --link-primary: #a390f5;
+        --border-primary: #43405e;
+        --button-primary-bg: #37344e;
+        --button-primary-hover-bg: #43405e;
+        --sidebar-opacity: 1;
+        --content-opacity: 1;
+      }
+      
+      [data-theme='cream-paper'] {
+        --bg-primary: #f6f1e9;
+        --bg-secondary: #fdfaf4;
+        --text-primary: #3b3b3b;
+        --accent-primary: #2a6f97;
+        --link-primary: #2a6f97;
+        --border-primary: #dcd6c8;
+        --button-primary-bg: #e8e2d9;
+        --button-primary-hover-bg: #f3ede3;
+        --sidebar-opacity: 1;
+        --content-opacity: 1;
+      }
+      
+      [data-theme='sunset'] {
+        --bg-primary: #3a294a;
+        --bg-secondary: #2e203c;
+        --text-primary: #f8c5d8;
+        --accent-primary: #ff8fab;
+        --link-primary: #ff8fab;
+        --border-primary: #4a395a;
+        --button-primary-bg: #4a395a;
+        --button-primary-hover-bg: #5a496a;
+        --sidebar-opacity: 1;
+        --content-opacity: 1;
+      }
+      
+      [data-theme='synthwave'] {
+        --bg-primary: #000022;
+        --bg-secondary: #000033;
+        --text-primary: #ffffff;
+        --accent-primary: #00ffff;
+        --link-primary: #ff00ff;
+        --border-primary: #00ffff;
+        --button-primary-bg: #000044;
+        --button-primary-hover-bg: #000055;
+        --sidebar-opacity: 1;
+        --content-opacity: 1;
+      }
+      
+    </style>
+  
+
+  
+  <style>
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    
+    [data-theme='dark'] body::before {
+        background-image: none;
+        opacity: 0;
+    }
+    
+    [data-theme='dreamer'] body::before {
+        background-image: none;
+        opacity: 0;
+    }
+    
+    [data-theme='cream-paper'] body::before {
+        background-image: none;
+        opacity: 0;
+    }
+    
+    [data-theme='sunset'] body::before {
+        background-image: none;
+        opacity: 0;
+    }
+    
+    [data-theme='synthwave'] body::before {
+        background-image: none;
+        opacity: 0;
+    }
+    
+  </style>
+
+  
+  <style>
+    :root {
+      --sidebar-width: 17.5rem;
+      --content-width: 65rem;
+      --border-radius: 10px;
+      --border-thickness: 1px;
+      --shadow-thickness: 3px;
+      --card-columns: 2;
+    }
+  </style>
+
+  
+  <script>
+    (function() {
+      
+      var availableThemes = ["dark","dreamer","cream-paper","sunset","synthwave"];
+      
+      var theme = localStorage.getItem('theme');
+      if (!theme && availableThemes.length > 0) {
+        theme = availableThemes[0];
+        localStorage.setItem('theme', theme);
+      }
+      
+      if (theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+      }
+      
+    })();
+  </script>
+
+  
+  <noscript>
+    <style>
+      .waterfall-layout .article-list {
+        opacity: 1;
+      }
+      .waterfall-layout .card-item {
+        position: relative;
+        width: 100%;
+      }
+    </style>
+  </noscript>
+</head>
+
+<body>
+  <div class="wrapper">
+    
+    <button class="sidebar-toggle" aria-label="Toggle sidebar">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+           viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+           class="feather feather-menu">
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <line x1="3" y1="18" x2="21" y2="18" />
+      </svg>
+    </button>
+
+    
+    <aside
+  class="sidebar"
+  style='--sidebar-width: 17.5rem'
+>
+  <div class="sidebar-inner">
+    <a href="http://localhost:1313/" class="logo-container">
+      
+      <span class="logo-text">Simple Cards</span>
+    </a>
+
+    <div class="sidebar-content">
+      <nav class="main-nav">
+        <ul>
+          
+            
+              <li>
+                <a href="/">Posts</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/waterfall/">Waterfall</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/archive/">Archive</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/tags/">️Tags</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/search/">Search</a>
+              </li>
+            
+          
+            
+              <li class="menu-item-has-children">
+                <a href="#" class="menu-toggle" data-target="submenu-categories">
+                  Categories
+                  <span class="submenu-indicator">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                      <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    </svg>
+                  </span>
+                </a>
+                <ul class="submenu" id="submenu-categories">
+                  
+                    
+                      <li class="menu-item-has-children">
+                        <a href="#" class="menu-toggle" data-target="submenu-technology">
+                          Technology
+                          <span class="submenu-indicator">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                              <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            </svg>
+                          </span>
+                        </a>
+                        <ul class="submenu" id="submenu-technology">
+                          
+                            <li>
+                              <a href="/categories/programming/">Programming</a>
+                            </li>
+                          
+                        </ul>
+                      </li>
+                    
+                  
+                </ul>
+              </li>
+            
+          
+        </ul>
+      </nav>
+
+
+      <div class="sidebar-bottom">
+        <div class="sidebar-buttons">
+          <button id="theme-switcher" title="Next theme">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2
+                   2 6.477 2 12c0 2.21.895 4.209 2.343 5.657L12 22z"
+              />
+              <circle cx="7.5" cy="10.5" r="1.5" />
+              <circle cx="12" cy="7" r="1" />
+              <circle cx="16.5" cy="10.5" r="1.5" />
+              <circle cx="15" cy="15" r="1" />
+            </svg>
+          </button>
+        </div>
+        <div class="sidebar-footer">
+          <footer class="site-footer">
+  <p>&copy; 2025 Simple Cards.</p>
+  <p>Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & Simple Cards.</p>
+</footer>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>
+
+    <div class="sidebar-overlay"></div>
+
+    
+    <div class="main-area">
+      <main class="content">
+        
+  <div class="container">
+    <article class="single-article" id="top">
+      
+      <header>
+        <h1>Shortcode 功能展示</h1>
+        <div class="article-meta">
+  <time datetime="2024-11-04">
+    Nov 4, 2024
+  </time>
+
+  
+    <span class="tags">
+      
+        <a href="/tags/shortcode">#shortcode</a>
+      
+        <a href="/tags/demo">#demo</a>
+      
+        <a href="/tags/simple-cards">#simple-cards</a>
+      
+    </span>
+  
+</div>
+      </header>
+      <div class="article-content">
+        <h1 id="-shortcode-功能展示">
+  🎨 Shortcode 功能展示
+  <a href="#-shortcode-%e5%8a%9f%e8%83%bd%e5%b1%95%e7%a4%ba" class="anchor-link" aria-label="Link to this section">#</a>
+</h1>
+<p>这篇文章展示了 Simple Cards 主题中所有可用的 shortcode 功能。这些 shortcode 可以帮助您创建更丰富、更互动的内容。</p>
+<hr>
+<h2 id="-按钮组件">
+  🔘 按钮组件
+  <a href="#-%e6%8c%89%e9%92%ae%e7%bb%84%e4%bb%b6" class="anchor-link" aria-label="Link to this section">#</a>
+</h2>
+<h3 id="基础按钮">
+  基础按钮
+  <a href="#%e5%9f%ba%e7%a1%80%e6%8c%89%e9%92%ae" class="anchor-link" aria-label="Link to this section">#</a>
+</h3>
+<a href="#" target="_self" class="btn ">
+默认按钮
+
+</a>
+
+<h3 id="不同样式的按钮">
+  不同样式的按钮
+  <a href="#%e4%b8%8d%e5%90%8c%e6%a0%b7%e5%bc%8f%e7%9a%84%e6%8c%89%e9%92%ae" class="anchor-link" aria-label="Link to this section">#</a>
+</h3>
+<a href="#" target="_self" class="btn btn-primary">
+主要按钮
+
+</a>
+
+<a href="#" target="_self" class="btn btn-outline">
+轮廓按钮
+
+</a>
+
+<h3 id="带图标的按钮">
+  带图标的按钮
+  <a href="#%e5%b8%a6%e5%9b%be%e6%a0%87%e7%9a%84%e6%8c%89%e9%92%ae" class="anchor-link" aria-label="Link to this section">#</a>
+</h3>
+<a href="https://github.com" target="_blank" class="btn "><span class="btn-icon">🚀</span>
+GitHub
+
+</a>
+
+<a href="https://twitter.com" target="_blank" class="btn "><span class="btn-icon">🐦</span>
+Twitter
+
+</a>
+
+<hr>
+<h2 id="-提示框组件">
+  📢 提示框组件
+  <a href="#-%e6%8f%90%e7%a4%ba%e6%a1%86%e7%bb%84%e4%bb%b6" class="anchor-link" aria-label="Link to this section">#</a>
+</h2>
+<h3 id="信息提示">
+  信息提示
+  <a href="#%e4%bf%a1%e6%81%af%e6%8f%90%e7%a4%ba" class="anchor-link" aria-label="Link to this section">#</a>
+</h3>
+<div class="notice notice-info"><div class="notice-title">💡 信息提示</div><div class="notice-content">
+    
+这是一个信息提示框，用于提供一般性的信息和建议。您可以在其中放置任何 Markdown 内容，包括链接、列表等。
+
+  </div>
+</div>
+
+<h3 id="警告提示">
+  警告提示
+  <a href="#%e8%ad%a6%e5%91%8a%e6%8f%90%e7%a4%ba" class="anchor-link" aria-label="Link to this section">#</a>
+</h3>
+<div class="notice notice-warning"><div class="notice-title">⚠️ 警告</div><div class="notice-content">
+    
+这是一个警告提示框，用于提醒用户注意潜在的问题或风险。
+
+  </div>
+</div>
+
+<h3 id="成功提示">
+  成功提示
+  <a href="#%e6%88%90%e5%8a%9f%e6%8f%90%e7%a4%ba" class="anchor-link" aria-label="Link to this section">#</a>
+</h3>
+<div class="notice notice-success"><div class="notice-title">✅ 成功</div><div class="notice-content">
+    
+操作成功完成！您的更改已保存。
+
+  </div>
+</div>
+
+<h3 id="错误提示">
+  错误提示
+  <a href="#%e9%94%99%e8%af%af%e6%8f%90%e7%a4%ba" class="anchor-link" aria-label="Link to this section">#</a>
+</h3>
+<div class="notice notice-error"><div class="notice-title">❌ 错误</div><div class="notice-content">
+    
+发生了一个错误，请检查您的输入并重试。
+
+  </div>
+</div>
+
+<h3 id="小贴士">
+  小贴士
+  <a href="#%e5%b0%8f%e8%b4%b4%e5%a3%ab" class="anchor-link" aria-label="Link to this section">#</a>
+</h3>
+<div class="notice notice-tip"><div class="notice-title">💡 小贴士</div><div class="notice-content">
+    
+您可以使用快捷键 `Ctrl+S` 快速保存文档。
+
+  </div>
+</div>
+
+<hr>
+<h2 id="-标签页组件">
+  📑 标签页组件
+  <a href="#-%e6%a0%87%e7%ad%be%e9%a1%b5%e7%bb%84%e4%bb%b6" class="anchor-link" aria-label="Link to this section">#</a>
+</h2>
+<h3 id="基础标签页">
+  基础标签页
+  <a href="#%e5%9f%ba%e7%a1%80%e6%a0%87%e7%ad%be%e9%a1%b5" class="anchor-link" aria-label="Link to this section">#</a>
+</h3>
+<div class="tabs-container">
+  <div class="tabs-nav"><button class="tab-button active" 
+              data-tab="0">
+        安装指南
+      </button><button class="tab-button" 
+              data-tab="1">
+        配置说明
+      </button><button class="tab-button" 
+              data-tab="2">
+        使用方法
+      </button></div>
+  <div class="tabs-content"><div class="tab-pane active" 
+           data-tab="0">
+        <h2 id="安装步骤">
+  安装步骤
+  <a href="#%e5%ae%89%e8%a3%85%e6%ad%a5%e9%aa%a4" class="anchor-link" aria-label="Link to this section">#</a>
+</h2>
+<ol>
+<li>
+<p><strong>下载软件</strong></p>
+<ul>
+<li>访问官方网站</li>
+<li>选择适合您系统的版本</li>
+</ul>
+</li>
+<li>
+<p><strong>运行安装程序</strong></p>
+<ul>
+<li>双击安装文件</li>
+<li>按照向导提示完成安装</li>
+</ul>
+</li>
+<li>
+<p><strong>验证安装</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>--version
+</span></span></code></pre></div></li>
+</ol>
+
+      </div><div class="tab-pane" 
+           data-tab="1">
+        <h2 id="配置文件">
+  配置文件
+  <a href="#%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6" class="anchor-link" aria-label="Link to this section">#</a>
+</h2>
+<p>编辑配置文件 <code>config.json</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#7ee787">&#34;name&#34;</span>: <span style="color:#a5d6ff">&#34;My Application&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#7ee787">&#34;version&#34;</span>: <span style="color:#a5d6ff">&#34;1.0.0&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#7ee787">&#34;settings&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&#34;theme&#34;</span>: <span style="color:#a5d6ff">&#34;dark&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&#34;language&#34;</span>: <span style="color:#a5d6ff">&#34;zh-CN&#34;</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="主要配置项">
+  主要配置项
+  <a href="#%e4%b8%bb%e8%a6%81%e9%85%8d%e7%bd%ae%e9%a1%b9" class="anchor-link" aria-label="Link to this section">#</a>
+</h3>
+<ul>
+<li><code>name</code>: 应用程序名称</li>
+<li><code>version</code>: 版本号</li>
+<li><code>settings.theme</code>: 主题设置</li>
+<li><code>settings.language</code>: 语言设置</li>
+</ul>
+      </div><div class="tab-pane" 
+           data-tab="2">
+        <h2 id="快速开始">
+  快速开始
+  <a href="#%e5%bf%ab%e9%80%9f%e5%bc%80%e5%a7%8b" class="anchor-link" aria-label="Link to this section">#</a>
+</h2>
+<h3 id="启动应用">
+  启动应用
+  <a href="#%e5%90%af%e5%8a%a8%e5%ba%94%e7%94%a8" class="anchor-link" aria-label="Link to this section">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm start
+</span></span></code></pre></div><h3 id="访问应用">
+  访问应用
+  <a href="#%e8%ae%bf%e9%97%ae%e5%ba%94%e7%94%a8" class="anchor-link" aria-label="Link to this section">#</a>
+</h3>
+<p>打开浏览器访问：http://localhost:3000</p>
+<h3 id="基本操作">
+  基本操作
+  <a href="#%e5%9f%ba%e6%9c%ac%e6%93%8d%e4%bd%9c" class="anchor-link" aria-label="Link to this section">#</a>
+</h3>
+<ol>
+<li>登录系统</li>
+<li>创建新项目</li>
+<li>开始使用</li>
+</ol>
+      </div></div>
+</div>
+<hr>
+<h2 id="-图片画廊">
+  🖼️ 图片画廊
+  <a href="#-%e5%9b%be%e7%89%87%e7%94%bb%e5%bb%8a" class="anchor-link" aria-label="Link to this section">#</a>
+</h2>
+<h3 id="三列画廊">
+  三列画廊
+  <a href="#%e4%b8%89%e5%88%97%e7%94%bb%e5%bb%8a" class="anchor-link" aria-label="Link to this section">#</a>
+</h3>
+<div class="gallery gallery-3-cols "><div class="gallery-item">
+      <img src="https://picsum.photos/400/300?random=1" 
+           alt="美丽的风景" 
+           loading="lazy" title="美丽的风景">
+        <div class="gallery-caption">美丽的风景</div>
+    </div><div class="gallery-item">
+      <img src="https://picsum.photos/400/300?random=2" 
+           alt="城市夜景" 
+           loading="lazy" title="城市夜景">
+        <div class="gallery-caption">城市夜景</div>
+    </div><div class="gallery-item">
+      <img src="https://picsum.photos/400/300?random=3" 
+           alt="自然风光" 
+           loading="lazy" title="自然风光">
+        <div class="gallery-caption">自然风光</div>
+    </div><div class="gallery-item">
+      <img src="https://picsum.photos/400/300?random=4" 
+           alt="建筑艺术" 
+           loading="lazy" title="建筑艺术">
+        <div class="gallery-caption">建筑艺术</div>
+    </div><div class="gallery-item">
+      <img src="https://picsum.photos/400/300?random=5" 
+           alt="人文摄影" 
+           loading="lazy" title="人文摄影">
+        <div class="gallery-caption">人文摄影</div>
+    </div><div class="gallery-item">
+      <img src="https://picsum.photos/400/300?random=6" 
+           alt="抽象艺术" 
+           loading="lazy" title="抽象艺术">
+        <div class="gallery-caption">抽象艺术</div>
+    </div></div>
+<h3 id="两列画廊">
+  两列画廊
+  <a href="#%e4%b8%a4%e5%88%97%e7%94%bb%e5%bb%8a" class="anchor-link" aria-label="Link to this section">#</a>
+</h3>
+<div class="gallery gallery-2-cols "><div class="gallery-item">
+      <img src="https://picsum.photos/600/400?random=7" 
+           alt="大尺寸图片展示" 
+           loading="lazy" title="大尺寸图片展示">
+        <div class="gallery-caption">大尺寸图片展示</div>
+    </div><div class="gallery-item">
+      <img src="https://picsum.photos/600/400?random=8" 
+           alt="另一个大尺寸图片" 
+           loading="lazy" title="另一个大尺寸图片">
+        <div class="gallery-caption">另一个大尺寸图片</div>
+    </div></div>
+<hr>
+<h2 id="-组合使用示例">
+  🎯 组合使用示例
+  <a href="#-%e7%bb%84%e5%90%88%e4%bd%bf%e7%94%a8%e7%a4%ba%e4%be%8b" class="anchor-link" aria-label="Link to this section">#</a>
+</h2>
+<h3 id="项目展示">
+  项目展示
+  <a href="#%e9%a1%b9%e7%9b%ae%e5%b1%95%e7%a4%ba" class="anchor-link" aria-label="Link to this section">#</a>
+</h3>
+<div class="notice notice-info"><div class="notice-title">项目介绍</div><div class="notice-content">
+    
+这是一个展示如何组合使用多个 shortcode 的示例项目。
+
+  </div>
+</div>
+
+<div class="tabs-container">
+  <div class="tabs-nav"><button class="tab-button active" 
+              data-tab="0">
+        项目概述
+      </button><button class="tab-button" 
+              data-tab="1">
+        技术栈
+      </button><button class="tab-button" 
+              data-tab="2">
+        快速开始
+      </button></div>
+  <div class="tabs-content"><div class="tab-pane active" 
+           data-tab="0">
+        <h2 id="项目简介">
+  项目简介
+  <a href="#%e9%a1%b9%e7%9b%ae%e7%ae%80%e4%bb%8b" class="anchor-link" aria-label="Link to this section">#</a>
+</h2>
+<p>这是一个使用 Simple Cards 主题 shortcode 功能的演示项目。</p>
+<h3 id="主要特性">
+  主要特性
+  <a href="#%e4%b8%bb%e8%a6%81%e7%89%b9%e6%80%a7" class="anchor-link" aria-label="Link to this section">#</a>
+</h3>
+<ul>
+<li>🎨 美观的按钮设计</li>
+<li>📢 多种提示框样式</li>
+<li>📑 交互式标签页</li>
+<li>🖼️ 响应式图片画廊</li>
+</ul>
+      </div><div class="tab-pane" 
+           data-tab="1">
+        <h2 id="技术实现">
+  技术实现
+  <a href="#%e6%8a%80%e6%9c%af%e5%ae%9e%e7%8e%b0" class="anchor-link" aria-label="Link to this section">#</a>
+</h2>
+<h3 id="前端技术">
+  前端技术
+  <a href="#%e5%89%8d%e7%ab%af%e6%8a%80%e6%9c%af" class="anchor-link" aria-label="Link to this section">#</a>
+</h3>
+<ul>
+<li><strong>Hugo</strong>: 静态网站生成器</li>
+<li><strong>SCSS</strong>: CSS 预处理器</li>
+<li><strong>JavaScript</strong>: 交互功能</li>
+</ul>
+<h3 id="设计原则">
+  设计原则
+  <a href="#%e8%ae%be%e8%ae%a1%e5%8e%9f%e5%88%99" class="anchor-link" aria-label="Link to this section">#</a>
+</h3>
+<ul>
+<li>响应式设计</li>
+<li>主题系统集成</li>
+<li>无障碍访问支持</li>
+</ul>
+
+      </div><div class="tab-pane" 
+           data-tab="2">
+        <h2 id="使用指南">
+  使用指南
+  <a href="#%e4%bd%bf%e7%94%a8%e6%8c%87%e5%8d%97" class="anchor-link" aria-label="Link to this section">#</a>
+</h2>
+<h3 id="1-安装主题">
+  1. 安装主题
+  <a href="#1-%e5%ae%89%e8%a3%85%e4%b8%bb%e9%a2%98" class="anchor-link" aria-label="Link to this section">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/your-repo/simple-cards.git
+</span></span></code></pre></div><h3 id="2-配置-hugo">
+  2. 配置 Hugo
+  <a href="#2-%e9%85%8d%e7%bd%ae-hugo" class="anchor-link" aria-label="Link to this section">#</a>
+</h3>
+<p>在 <code>config.toml</code> 中设置主题：</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>theme = <span style="color:#a5d6ff">&#34;simple-cards&#34;</span>
+</span></span></code></pre></div><h3 id="3-创建内容">
+  3. 创建内容
+  <a href="#3-%e5%88%9b%e5%bb%ba%e5%86%85%e5%ae%b9" class="anchor-link" aria-label="Link to this section">#</a>
+</h3>
+<p>使用 shortcode 创建丰富内容：</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+
+      </div></div>
+</div>
+<hr>
+<h2 id="-使用技巧">
+  📝 使用技巧
+  <a href="#-%e4%bd%bf%e7%94%a8%e6%8a%80%e5%b7%a7" class="anchor-link" aria-label="Link to this section">#</a>
+</h2>
+<h3 id="嵌套使用">
+  嵌套使用
+  <a href="#%e5%b5%8c%e5%a5%97%e4%bd%bf%e7%94%a8" class="anchor-link" aria-label="Link to this section">#</a>
+</h3>
+<p>您可以在标签页中嵌套其他 shortcode：</p>
+<div class="tabs-container">
+  <div class="tabs-nav"><button class="tab-button active" 
+              data-tab="0">
+        示例
+      </button></div>
+  <div class="tabs-content"><div class="tab-pane active" 
+           data-tab="0">
+        <!-- raw HTML omitted -->
+<p>这个提示框就在标签页内部！</p>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted -->🎉<!-- raw HTML omitted -->
+嵌套按钮</p>
+<!-- raw HTML omitted -->
+
+      </div></div>
+</div>
+<h3 id="自定义样式">
+  自定义样式
+  <a href="#%e8%87%aa%e5%ae%9a%e4%b9%89%e6%a0%b7%e5%bc%8f" class="anchor-link" aria-label="Link to this section">#</a>
+</h3>
+<p>所有 shortcode 都支持通过 CSS 类进行自定义：</p>
+<a href="#" target="_self" class="btn btn-primary custom-btn">
+自定义按钮
+
+</a>
+
+<hr>
+<h2 id="-总结">
+  🎉 总结
+  <a href="#-%e6%80%bb%e7%bb%93" class="anchor-link" aria-label="Link to this section">#</a>
+</h2>
+<p>Simple Cards 主题的 shortcode 系统提供了：</p>
+<ol>
+<li><strong>🔘 按钮</strong> - 多种样式和交互效果</li>
+<li><strong>📢 提示框</strong> - 5种不同类型的信息提示</li>
+<li><strong>📑 标签页</strong> - 交互式内容组织</li>
+<li><strong>🖼️ 图片画廊</strong> - 响应式图片展示</li>
+</ol>
+<p>这些 shortcode 与主题系统完美集成，支持：</p>
+<ul>
+<li>🎨 主题变量自定义</li>
+<li>📱 响应式设计</li>
+<li>🌙 深色/浅色主题切换</li>
+<li>⚡ 高性能渲染</li>
+</ul>
+<p>开始使用这些 shortcode，让您的 Hugo 网站内容更加丰富多彩！</p>
+<hr>
+<div class="notice notice-success"><div class="notice-title">🎊 恭喜！</div><div class="notice-content">
+    
+您已经了解了 Simple Cards 主题的所有 shortcode 功能！现在可以在您的文章中使用这些功能了。
+
+  </div>
+</div>
+
+
+      </div>
+    </article>
+  </div>
+
+        </main>
+      <aside class="widgets">
+        
+  <nav class="article-toc" id="article-toc">
+  <div class="toc-title">
+    <span>Shortcode 功能展示</span>
+  </div>
+  <div class="toc-nav-wrapper">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#-按钮组件">🔘 按钮组件</a>
+      <ul>
+        <li><a href="#基础按钮">基础按钮</a></li>
+        <li><a href="#不同样式的按钮">不同样式的按钮</a></li>
+        <li><a href="#带图标的按钮">带图标的按钮</a></li>
+      </ul>
+    </li>
+    <li><a href="#-提示框组件">📢 提示框组件</a>
+      <ul>
+        <li><a href="#信息提示">信息提示</a></li>
+        <li><a href="#警告提示">警告提示</a></li>
+        <li><a href="#成功提示">成功提示</a></li>
+        <li><a href="#错误提示">错误提示</a></li>
+        <li><a href="#小贴士">小贴士</a></li>
+      </ul>
+    </li>
+    <li><a href="#-标签页组件">📑 标签页组件</a>
+      <ul>
+        <li><a href="#基础标签页">基础标签页</a></li>
+      </ul>
+    </li>
+    <li><a href="#-图片画廊">🖼️ 图片画廊</a>
+      <ul>
+        <li><a href="#三列画廊">三列画廊</a></li>
+        <li><a href="#两列画廊">两列画廊</a></li>
+      </ul>
+    </li>
+    <li><a href="#-组合使用示例">🎯 组合使用示例</a>
+      <ul>
+        <li><a href="#项目展示">项目展示</a></li>
+      </ul>
+    </li>
+    <li><a href="#-使用技巧">📝 使用技巧</a>
+      <ul>
+        <li><a href="#嵌套使用">嵌套使用</a></li>
+        <li><a href="#自定义样式">自定义样式</a></li>
+      </ul>
+    </li>
+    <li><a href="#-总结">🎉 总结</a></li>
+  </ul>
+</nav>
+  </div>
+</nav>
+
+  
+  <button class="mobile-toc-toggle" id="mobile-toc-toggle" aria-label="Toggle table of contents">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </button>
+
+  
+  <div class="mobile-toc-container" id="mobile-toc-container">
+    <div class="mobile-toc-header">
+      <span class="mobile-toc-title">Shortcode 功能展示</span>
+    </div>
+    <div class="mobile-toc-content">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#-按钮组件">🔘 按钮组件</a>
+      <ul>
+        <li><a href="#基础按钮">基础按钮</a></li>
+        <li><a href="#不同样式的按钮">不同样式的按钮</a></li>
+        <li><a href="#带图标的按钮">带图标的按钮</a></li>
+      </ul>
+    </li>
+    <li><a href="#-提示框组件">📢 提示框组件</a>
+      <ul>
+        <li><a href="#信息提示">信息提示</a></li>
+        <li><a href="#警告提示">警告提示</a></li>
+        <li><a href="#成功提示">成功提示</a></li>
+        <li><a href="#错误提示">错误提示</a></li>
+        <li><a href="#小贴士">小贴士</a></li>
+      </ul>
+    </li>
+    <li><a href="#-标签页组件">📑 标签页组件</a>
+      <ul>
+        <li><a href="#基础标签页">基础标签页</a></li>
+      </ul>
+    </li>
+    <li><a href="#-图片画廊">🖼️ 图片画廊</a>
+      <ul>
+        <li><a href="#三列画廊">三列画廊</a></li>
+        <li><a href="#两列画廊">两列画廊</a></li>
+      </ul>
+    </li>
+    <li><a href="#-组合使用示例">🎯 组合使用示例</a>
+      <ul>
+        <li><a href="#项目展示">项目展示</a></li>
+      </ul>
+    </li>
+    <li><a href="#-使用技巧">📝 使用技巧</a>
+      <ul>
+        <li><a href="#嵌套使用">嵌套使用</a></li>
+        <li><a href="#自定义样式">自定义样式</a></li>
+      </ul>
+    </li>
+    <li><a href="#-总结">🎉 总结</a></li>
+  </ul>
+</nav>
+    </div>
+  </div>
+
+  
+  <div class="mobile-widgets-overlay" id="mobile-widgets-overlay"></div>
+<a href="#top" class="back-to-top" id="back-to-top">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</a>
+
+      </aside>
+    </div>
+  </div>
+
+  
+  
+  <script>
+    
+    window.styleConfig = "{\"border_radius\":\"10px\",\"border_thickness\":\"1px\",\"card_columns\":2,\"content_width\":\"65rem\",\"shadow_thickness\":\"3px\",\"sidebar_width\":\"17.5rem\"}";
+    
+    
+    window.availableThemes = ["dark","dreamer","cream-paper","sunset","synthwave"];
+    
+    
+    
+    (function() {
+      let theme = localStorage.getItem('theme');
+      if (!theme && window.availableThemes && window.availableThemes.length > 0) {
+        theme = window.availableThemes[0];
+        localStorage.setItem('theme', theme);
+      }
+      if (theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        window.currentThemeName = theme;
+      }
+    })();
+  </script>
+
+  
+  <script src="http://localhost:1313/js/main.min.b9748a8941a497381787c425905f015004b1dd6ab2463885a5c33b15e9e16edb.js" defer></script>
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    <script src="http://localhost:1313/js/anchor-links.min.8491553b31a2d4427b943211282b7dd4ac5244264033b8a21854cf30fbcc7679.js" defer></script>
+  
+</body>
+</html>

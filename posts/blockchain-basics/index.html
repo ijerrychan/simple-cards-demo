@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>区块链基础知识：理解去中心化技术 | Simple Cards</title>
+  <meta name="generator" content="Hugo 0.152.2">
+
+  
+  
+  <link rel="stylesheet" href="http://localhost:1313/scss/main.min.f2eaa26d682e91380e47d7af0a7eb968d44c7ac3b8657e7de6f96a901552a257.css">
+
+  
+    
+    
+
+    
+      
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bungee&amp;display=swap" rel="stylesheet">
+        <style>
+          :root {
+            
+            
+            --title-font: 'Bungee', sans-serif;
+          }
+        </style>
+      
+    
+
+    
+    <style>
+      
+      [data-theme='dark'] {
+        --bg-primary: #1a202c;
+        --bg-secondary: #2d3748;
+        --text-primary: #e2e8f0;
+        --accent-primary: #63b3ed;
+        --link-primary: #63b3ed;
+        --border-primary: #4a5568;
+        --button-primary-bg: #4a5568;
+        --button-primary-hover-bg: #2d3748;
+        --sidebar-opacity: 1;
+        --content-opacity: 1;
+      }
+      
+      [data-theme='dreamer'] {
+        --bg-primary: #1e1c2f;
+        --bg-secondary: #2c2a3f;
+        --text-primary: #c3c0d1;
+        --accent-primary: #82f5a0;
+        --link-primary: #a390f5;
+        --border-primary: #43405e;
+        --button-primary-bg: #37344e;
+        --button-primary-hover-bg: #43405e;
+        --sidebar-opacity: 1;
+        --content-opacity: 1;
+      }
+      
+      [data-theme='cream-paper'] {
+        --bg-primary: #f6f1e9;
+        --bg-secondary: #fdfaf4;
+        --text-primary: #3b3b3b;
+        --accent-primary: #2a6f97;
+        --link-primary: #2a6f97;
+        --border-primary: #dcd6c8;
+        --button-primary-bg: #e8e2d9;
+        --button-primary-hover-bg: #f3ede3;
+        --sidebar-opacity: 1;
+        --content-opacity: 1;
+      }
+      
+      [data-theme='sunset'] {
+        --bg-primary: #3a294a;
+        --bg-secondary: #2e203c;
+        --text-primary: #f8c5d8;
+        --accent-primary: #ff8fab;
+        --link-primary: #ff8fab;
+        --border-primary: #4a395a;
+        --button-primary-bg: #4a395a;
+        --button-primary-hover-bg: #5a496a;
+        --sidebar-opacity: 1;
+        --content-opacity: 1;
+      }
+      
+      [data-theme='synthwave'] {
+        --bg-primary: #000022;
+        --bg-secondary: #000033;
+        --text-primary: #ffffff;
+        --accent-primary: #00ffff;
+        --link-primary: #ff00ff;
+        --border-primary: #00ffff;
+        --button-primary-bg: #000044;
+        --button-primary-hover-bg: #000055;
+        --sidebar-opacity: 1;
+        --content-opacity: 1;
+      }
+      
+    </style>
+  
+
+  
+  <style>
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    
+    [data-theme='dark'] body::before {
+        background-image: none;
+        opacity: 0;
+    }
+    
+    [data-theme='dreamer'] body::before {
+        background-image: none;
+        opacity: 0;
+    }
+    
+    [data-theme='cream-paper'] body::before {
+        background-image: none;
+        opacity: 0;
+    }
+    
+    [data-theme='sunset'] body::before {
+        background-image: none;
+        opacity: 0;
+    }
+    
+    [data-theme='synthwave'] body::before {
+        background-image: none;
+        opacity: 0;
+    }
+    
+  </style>
+
+  
+  <style>
+    :root {
+      --sidebar-width: 17.5rem;
+      --content-width: 65rem;
+      --border-radius: 10px;
+      --border-thickness: 1px;
+      --shadow-thickness: 3px;
+      --card-columns: 2;
+    }
+  </style>
+
+  
+  <script>
+    (function() {
+      
+      var availableThemes = ["dark","dreamer","cream-paper","sunset","synthwave"];
+      
+      var theme = localStorage.getItem('theme');
+      if (!theme && availableThemes.length > 0) {
+        theme = availableThemes[0];
+        localStorage.setItem('theme', theme);
+      }
+      
+      if (theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+      }
+      
+    })();
+  </script>
+
+  
+  <noscript>
+    <style>
+      .waterfall-layout .article-list {
+        opacity: 1;
+      }
+      .waterfall-layout .card-item {
+        position: relative;
+        width: 100%;
+      }
+    </style>
+  </noscript>
+</head>
+
+<body>
+  <div class="wrapper">
+    
+    <button class="sidebar-toggle" aria-label="Toggle sidebar">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+           viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+           class="feather feather-menu">
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <line x1="3" y1="18" x2="21" y2="18" />
+      </svg>
+    </button>
+
+    
+    <aside
+  class="sidebar"
+  style='--sidebar-width: 17.5rem'
+>
+  <div class="sidebar-inner">
+    <a href="http://localhost:1313/" class="logo-container">
+      
+      <span class="logo-text">Simple Cards</span>
+    </a>
+
+    <div class="sidebar-content">
+      <nav class="main-nav">
+        <ul>
+          
+            
+              <li>
+                <a href="/">Posts</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/waterfall/">Waterfall</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/archive/">Archive</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/tags/">️Tags</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/search/">Search</a>
+              </li>
+            
+          
+            
+              <li class="menu-item-has-children">
+                <a href="#" class="menu-toggle" data-target="submenu-categories">
+                  Categories
+                  <span class="submenu-indicator">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                      <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    </svg>
+                  </span>
+                </a>
+                <ul class="submenu" id="submenu-categories">
+                  
+                    
+                      <li class="menu-item-has-children">
+                        <a href="#" class="menu-toggle" data-target="submenu-technology">
+                          Technology
+                          <span class="submenu-indicator">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                              <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            </svg>
+                          </span>
+                        </a>
+                        <ul class="submenu" id="submenu-technology">
+                          
+                            <li>
+                              <a href="/categories/programming/">Programming</a>
+                            </li>
+                          
+                        </ul>
+                      </li>
+                    
+                  
+                </ul>
+              </li>
+            
+          
+        </ul>
+      </nav>
+
+
+      <div class="sidebar-bottom">
+        <div class="sidebar-buttons">
+          <button id="theme-switcher" title="Next theme">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2
+                   2 6.477 2 12c0 2.21.895 4.209 2.343 5.657L12 22z"
+              />
+              <circle cx="7.5" cy="10.5" r="1.5" />
+              <circle cx="12" cy="7" r="1" />
+              <circle cx="16.5" cy="10.5" r="1.5" />
+              <circle cx="15" cy="15" r="1" />
+            </svg>
+          </button>
+        </div>
+        <div class="sidebar-footer">
+          <footer class="site-footer">
+  <p>&copy; 2025 Simple Cards.</p>
+  <p>Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & Simple Cards.</p>
+</footer>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>
+
+    <div class="sidebar-overlay"></div>
+
+    
+    <div class="main-area">
+      <main class="content">
+        
+  <div class="container">
+    <article class="single-article" id="top">
+      
+      <header>
+        <h1>区块链基础知识：理解去中心化技术</h1>
+        <div class="article-meta">
+  <time datetime="2023-12-01">
+    Dec 1, 2023
+  </time>
+
+  
+    <span class="tags">
+      
+        <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE">#区块链</a>
+      
+        <a href="/tags/%E6%8A%80%E6%9C%AF">#技术</a>
+      
+        <a href="/tags/%E5%8A%A0%E5%AF%86%E8%B4%A7%E5%B8%81">#加密货币</a>
+      
+        <a href="/tags/%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96">#去中心化</a>
+      
+        <a href="/tags/%E7%BC%96%E7%A8%8B">#编程</a>
+      
+    </span>
+  
+</div>
+      </header>
+      <div class="article-content">
+        <h2 id="区块链基础知识理解去中心化技术">
+  区块链基础知识：理解去中心化技术
+  <a href="#%e5%8c%ba%e5%9d%97%e9%93%be%e5%9f%ba%e7%a1%80%e7%9f%a5%e8%af%86%e7%90%86%e8%a7%a3%e5%8e%bb%e4%b8%ad%e5%bf%83%e5%8c%96%e6%8a%80%e6%9c%af" class="anchor-link" aria-label="Link to this section">#</a>
+</h2>
+<p>区块链技术自比特币诞生以来，便以其去中心化、不可篡改和透明的特性，吸引了全球的关注。它不仅仅是加密货币的底层技术，更被视为未来数字经济的重要基础设施。</p>
+<h3 id="什么是区块链">
+  什么是区块链？
+  <a href="#%e4%bb%80%e4%b9%88%e6%98%af%e5%8c%ba%e5%9d%97%e9%93%be" class="anchor-link" aria-label="Link to this section">#</a>
+</h3>
+<p>区块链本质上是一个分布式账本，由一系列“区块”组成，这些区块通过密码学方法链接在一起，形成一个不可篡改的链条。每个区块包含了一定数量的交易信息，并带有前一个区块的哈希值，确保了数据的完整性和顺序性。</p>
+<h3 id="区块链的核心特性">
+  区块链的核心特性
+  <a href="#%e5%8c%ba%e5%9d%97%e9%93%be%e7%9a%84%e6%a0%b8%e5%bf%83%e7%89%b9%e6%80%a7" class="anchor-link" aria-label="Link to this section">#</a>
+</h3>
+<ul>
+<li><strong>去中心化 (Decentralization)</strong>：没有中央机构控制，所有参与者共同维护账本。</li>
+<li><strong>不可篡改 (Immutability)</strong>：一旦交易被记录在区块中并添加到链上，就无法被修改或删除。</li>
+<li><strong>透明性 (Transparency)</strong>：所有交易对网络中的所有参与者都是可见的（尽管参与者的身份可以是匿名的）。</li>
+<li><strong>安全性 (Security)</strong>：通过密码学哈希和共识机制（如工作量证明PoW），确保了数据的安全。</li>
+</ul>
+<h3 id="关键组成部分">
+  关键组成部分
+  <a href="#%e5%85%b3%e9%94%ae%e7%bb%84%e6%88%90%e9%83%a8%e5%88%86" class="anchor-link" aria-label="Link to this section">#</a>
+</h3>
+<h4 id="1-区块-block">
+  1. 区块 (Block)
+  <a href="#1-%e5%8c%ba%e5%9d%97-block" class="anchor-link" aria-label="Link to this section">#</a>
+</h4>
+<p>包含交易数据、时间戳、前一个区块的哈希值以及一个随机数（Nonce）。</p>
+<h4 id="2-链-chain">
+  2. 链 (Chain)
+  <a href="#2-%e9%93%be-chain" class="anchor-link" aria-label="Link to this section">#</a>
+</h4>
+<p>区块通过哈希值按时间顺序链接在一起，形成一个链条。</p>
+<h4 id="3-节点-node">
+  3. 节点 (Node)
+  <a href="#3-%e8%8a%82%e7%82%b9-node" class="anchor-link" aria-label="Link to this section">#</a>
+</h4>
+<p>参与区块链网络的计算机，存储并验证区块链的副本。</p>
+<h4 id="4-共识机制-consensus-mechanism">
+  4. 共识机制 (Consensus Mechanism)
+  <a href="#4-%e5%85%b1%e8%af%86%e6%9c%ba%e5%88%b6-consensus-mechanism" class="anchor-link" aria-label="Link to this section">#</a>
+</h4>
+<p>确保所有节点对区块链的当前状态达成一致的规则，最常见的是工作量证明 (Proof of Work, PoW) 和权益证明 (Proof of Stake, PoS)。</p>
+<h3 id="区块链的应用">
+  区块链的应用
+  <a href="#%e5%8c%ba%e5%9d%97%e9%93%be%e7%9a%84%e5%ba%94%e7%94%a8" class="anchor-link" aria-label="Link to this section">#</a>
+</h3>
+<p>除了加密货币，区块链技术还在以下领域展现出巨大潜力：</p>
+<ul>
+<li><strong>供应链管理</strong>：追踪产品来源和流向，提高透明度。</li>
+<li><strong>数字身份</strong>：提供安全、可控的数字身份验证。</li>
+<li><strong>版权保护</strong>：记录作品的创作时间和所有权。</li>
+<li><strong>投票系统</strong>：构建更安全、透明的投票机制。</li>
+</ul>
+<h3 id="总结">
+  总结
+  <a href="#%e6%80%bb%e7%bb%93" class="anchor-link" aria-label="Link to this section">#</a>
+</h3>
+<p>区块链技术正在改变我们对信任、交易和数据管理的理解。虽然仍面临可扩展性、监管等挑战，但其去中心化的理念和强大的技术特性，预示着一个更加开放和透明的数字未来。</p>
+
+      </div>
+    </article>
+  </div>
+
+        </main>
+      <aside class="widgets">
+        
+  <nav class="article-toc" id="article-toc">
+  <div class="toc-title">
+    <span>区块链基础知识：理解去中心化技术</span>
+  </div>
+  <div class="toc-nav-wrapper">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#区块链基础知识理解去中心化技术">区块链基础知识：理解去中心化技术</a>
+      <ul>
+        <li><a href="#什么是区块链">什么是区块链？</a></li>
+        <li><a href="#区块链的核心特性">区块链的核心特性</a></li>
+        <li><a href="#关键组成部分">关键组成部分</a></li>
+        <li><a href="#区块链的应用">区块链的应用</a></li>
+        <li><a href="#总结">总结</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</nav>
+
+  
+  <button class="mobile-toc-toggle" id="mobile-toc-toggle" aria-label="Toggle table of contents">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </button>
+
+  
+  <div class="mobile-toc-container" id="mobile-toc-container">
+    <div class="mobile-toc-header">
+      <span class="mobile-toc-title">区块链基础知识：理解去中心化技术</span>
+    </div>
+    <div class="mobile-toc-content">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#区块链基础知识理解去中心化技术">区块链基础知识：理解去中心化技术</a>
+      <ul>
+        <li><a href="#什么是区块链">什么是区块链？</a></li>
+        <li><a href="#区块链的核心特性">区块链的核心特性</a></li>
+        <li><a href="#关键组成部分">关键组成部分</a></li>
+        <li><a href="#区块链的应用">区块链的应用</a></li>
+        <li><a href="#总结">总结</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  </div>
+
+  
+  <div class="mobile-widgets-overlay" id="mobile-widgets-overlay"></div>
+<a href="#top" class="back-to-top" id="back-to-top">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</a>
+
+      </aside>
+    </div>
+  </div>
+
+  
+  
+  <script>
+    
+    window.styleConfig = "{\"border_radius\":\"10px\",\"border_thickness\":\"1px\",\"card_columns\":2,\"content_width\":\"65rem\",\"shadow_thickness\":\"3px\",\"sidebar_width\":\"17.5rem\"}";
+    
+    
+    window.availableThemes = ["dark","dreamer","cream-paper","sunset","synthwave"];
+    
+    
+    
+    (function() {
+      let theme = localStorage.getItem('theme');
+      if (!theme && window.availableThemes && window.availableThemes.length > 0) {
+        theme = window.availableThemes[0];
+        localStorage.setItem('theme', theme);
+      }
+      if (theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        window.currentThemeName = theme;
+      }
+    })();
+  </script>
+
+  
+  <script src="http://localhost:1313/js/main.min.b9748a8941a497381787c425905f015004b1dd6ab2463885a5c33b15e9e16edb.js" defer></script>
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    <script src="http://localhost:1313/js/anchor-links.min.8491553b31a2d4427b943211282b7dd4ac5244264033b8a21854cf30fbcc7679.js" defer></script>
+  
+</body>
+</html>

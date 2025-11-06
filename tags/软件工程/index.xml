@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>软件工程 on Simple Cards</title>
+    <link>http://localhost:1313/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/</link>
+    <description>Recent content in 软件工程 on Simple Cards</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 05 Nov 2023 09:00:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>深入理解设计模式：读《设计模式》有感</title>
+      <link>http://localhost:1313/posts/design-patterns-deep-dive/</link>
+      <pubDate>Sun, 05 Nov 2023 09:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/design-patterns-deep-dive/</guid>
+      <description>&lt;h2 id=&#34;深入理解设计模式读设计模式有感&#34;&gt;&#xD;&#xA;  深入理解设计模式：读《设计模式》有感&#xD;&#xA;  &lt;a href=&#34;#%e6%b7%b1%e5%85%a5%e7%90%86%e8%a7%a3%e8%ae%be%e8%ae%a1%e6%a8%a1%e5%bc%8f%e8%af%bb%e8%ae%be%e8%ae%a1%e6%a8%a1%e5%bc%8f%e6%9c%89%e6%84%9f&#34; class=&#34;anchor-link&#34; aria-label=&#34;Link to this section&#34;&gt;#&lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;最近重读了经典的《设计模式：可复用面向对象软件的基础》（Gang of Four），对软件设计有了更深层次的理解。设计模式不仅仅是代码技巧，更是解决常见软件设计问题的经验总结。&lt;/p&gt;&#xA;&lt;h3 id=&#34;为什么需要设计模式&#34;&gt;&#xD;&#xA;  为什么需要设计模式？&#xD;&#xA;  &lt;a href=&#34;#%e4%b8%ba%e4%bb%80%e4%b9%88%e9%9c%80%e8%a6%81%e8%ae%be%e8%ae%a1%e6%a8%a1%e5%bc%8f&#34; class=&#34;anchor-link&#34; aria-label=&#34;Link to this section&#34;&gt;#&lt;/a&gt;&#xD;&#xA;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;在软件开发过程中，我们经常会遇到一些反复出现的设计问题。设计模式提供了一套经过验证的解决方案，它们是：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;可复用的&lt;/strong&gt;：可以直接应用于类似的问题。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;可沟通的&lt;/strong&gt;：提供了一种通用的语言，方便开发者之间交流设计思想。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;可维护的&lt;/strong&gt;：遵循设计模式的代码通常更易于理解和维护。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;几种常见的设计模式&#34;&gt;&#xD;&#xA;  几种常见的设计模式&#xD;&#xA;  &lt;a href=&#34;#%e5%87%a0%e7%a7%8d%e5%b8%b8%e8%a7%81%e7%9a%84%e8%ae%be%e8%ae%a1%e6%a8%a1%e5%bc%8f&#34; class=&#34;anchor-link&#34; aria-label=&#34;Link to this section&#34;&gt;#&lt;/a&gt;&#xD;&#xA;&lt;/h3&gt;&#xD;&#xA;&lt;h4 id=&#34;1-单例模式-singleton&#34;&gt;&#xD;&#xA;  1. 单例模式 (Singleton)&#xD;&#xA;  &lt;a href=&#34;#1-%e5%8d%95%e4%be%8b%e6%a8%a1%e5%bc%8f-singleton&#34; class=&#34;anchor-link&#34; aria-label=&#34;Link to this section&#34;&gt;#&lt;/a&gt;&#xD;&#xA;&lt;/h4&gt;&#xD;&#xA;&lt;p&gt;确保一个类只有一个实例，并提供一个全局访问点。&#xA;&lt;strong&gt;应用场景&lt;/strong&gt;：日志记录器、配置管理器。&lt;/p&gt;&#xA;&lt;h4 id=&#34;2-工厂模式-factory-method&#34;&gt;&#xD;&#xA;  2. 工厂模式 (Factory Method)&#xD;&#xA;  &lt;a href=&#34;#2-%e5%b7%a5%e5%8e%82%e6%a8%a1%e5%bc%8f-factory-method&#34; class=&#34;anchor-link&#34; aria-label=&#34;Link to this section&#34;&gt;#&lt;/a&gt;&#xD;&#xA;&lt;/h4&gt;&#xD;&#xA;&lt;p&gt;定义一个用于创建对象的接口，让子类决定实例化哪一个类。工厂方法使一个类的实例化延迟到其子类。&#xA;&lt;strong&gt;应用场景&lt;/strong&gt;：根据不同条件创建不同类型的对象。&lt;/p&gt;&#xA;&lt;h4 id=&#34;3-观察者模式-observer&#34;&gt;&#xD;&#xA;  3. 观察者模式 (Observer)&#xD;&#xA;  &lt;a href=&#34;#3-%e8%a7%82%e5%af%9f%e8%80%85%e6%a8%a1%e5%bc%8f-observer&#34; class=&#34;anchor-link&#34; aria-label=&#34;Link to this section&#34;&gt;#&lt;/a&gt;&#xD;&#xA;&lt;/h4&gt;&#xD;&#xA;&lt;p&gt;定义对象间的一种一对多的依赖关系，当一个对象的状态发生改变时，所有依赖于它的对象都得到通知并被自动更新。&#xA;&lt;strong&gt;应用场景&lt;/strong&gt;：事件处理系统、GUI编程。&lt;/p&gt;&#xA;&lt;h3 id=&#34;总结&#34;&gt;&#xD;&#xA;  总结&#xD;&#xA;  &lt;a href=&#34;#%e6%80%bb%e7%bb%93&#34; class=&#34;anchor-link&#34; aria-label=&#34;Link to this section&#34;&gt;#&lt;/a&gt;&#xD;&#xA;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;设计模式是软件开发者的宝贵财富。它们帮助我们编写出更健壮、更灵活、更易于扩展和维护的代码。然而，并非所有问题都需要设计模式，过度使用反而会增加复杂性。关键在于理解每种模式的意图和适用场景，并根据实际需求灵活运用。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Philosophy on Simple Cards</title>
+    <link>http://localhost:1313/tags/philosophy/</link>
+    <description>Recent content in Philosophy on Simple Cards</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 02 Nov 2024 17:45:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/philosophy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Minimalist Living Philosophy</title>
+      <link>http://localhost:1313/posts/waterfall-test-4/</link>
+      <pubDate>Sat, 02 Nov 2024 17:45:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/waterfall-test-4/</guid>
+      <description>Discover the principles of minimalist living and how they can lead to a more fulfilling life.</description>
+    </item>
+  </channel>
+</rss>
